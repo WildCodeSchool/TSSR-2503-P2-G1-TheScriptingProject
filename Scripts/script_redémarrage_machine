@@ -3,7 +3,7 @@
 
 echo "Confirmation du redémarrage (yes/no)"
 #Lecture du choix de redémarrage
-read choix
+read Choix
 case $Choix in
 
     yes) 
