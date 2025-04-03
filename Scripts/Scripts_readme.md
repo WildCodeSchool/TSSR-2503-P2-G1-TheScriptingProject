@@ -1,1 +1,1 @@
-Dossier de toutes les petits Script du projet
+Dossier de tous les petits Script du projet
