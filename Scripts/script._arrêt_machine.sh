@@ -13,5 +13,5 @@ case $Choix in
     no )
         echo "Annulation arrêt de la machine"
         echo "Pas d'arrêt" ;;
-    esac
+esac
 exit 0
