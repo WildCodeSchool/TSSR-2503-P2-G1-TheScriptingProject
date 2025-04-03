@@ -72,59 +72,114 @@ sudo chmod 744 ~/projet_script/access_file.sh
 
 
 #Menu Principal
-echo "----------------------"
-echo "Menu:"
-echo "----------------------"
-echo "1.Utilisateur"
-echo "2.Ordinateur"
-read -p "choisissez une cible : " choice1
+	echo "----------------------"
+	echo "Menu:"
+	echo "----------------------"
+	echo "1.Utilisateur"
+	echo "2.Ordinateur"
+	read -p "choisissez une cible : " main_choice
 
 
+case $main_choice in
 #Menu Utilisateur
-case $choice1 in
 1)
 	echo "----------------------"
 	echo "Menu Utilisateur"
 	echo "----------------------"
 	echo "1.Une action"
 	echo "2.Une information"
-	read -p "Que voulez-vous faire? " choice2
-esac
-
-
-
-#Menu Information
-case $choice2 in
+	read -p "Que voulez-vous faire? " menu_user_choice
+;;
+#Menu Ordinateur
 2)
-	echo "----------------------"
-	echo "Menu des informations"
-	echo "----------------------"
-	echo "1. Date de dernière connexion"
-	echo "2. Date de dernière modification de mot de passe"
-	echo "3. Liste des sessions ouvertes par l'utilisateur"
-	echo "4. Groupe d’appartenance d’un utilisateur"
-	echo "5. Historique des commandes exécutées par l'utilisateur"
-	echo "6. Droits/permissions de l’utilisateur sur un dossier"
-	echo "7. Droits/permissions de l’utilisateur sur un fichier" 
-	read -p "Choisissez une information " choice3
+        echo "----------------------"
+        echo "Menu Ordinateur"
+        echo "----------------------"
+        echo "1.Une action"
+        echo "2.Une information"
+        read -p "Que voulez-vous faire? " menu_computer_choice
+;;
 esac
 
-#Appel des fonctions d'informations 
-case $choice3 in
+
+
+
+case $menu_user_choice in
+# Menu Utilisateur Action
 1)
-	last.sh;;
+	echo "----------------------"
+        echo "Menu des actions utilisateur"
+        echo "----------------------"
+        echo "1.action 1"
+        echo "2.action 2"
+	read -p "Que voulez-vous faire? " menu_action_user_choice
+;;
+#Choix des actions à faire suite
+
+
+
+#Menu Utilisateur Information
 2)
-	lastdate_passwd.sh;;
-3)
-	open_user_session.sh;;
-4)
-	user_groups.sh;;
-5)
-	allcommand_user.sh;;
-6)
-	access_folder.sh;;
-7)
-	acces_file.sh;;
-*)
-	echo "Veuillez entrer un choix correct"
+        echo "----------------------"
+        echo "Menu des informations utilisateur"
+        echo "----------------------"
+        echo "1. Date de dernière connexion"
+        echo "2. Date de dernière modification de mot de passe"
+        echo "3. Liste des sessions ouvertes par l'utilisateur"
+        echo "4. Groupe d’appartenance d’un utilisateur"
+        echo "5. Historique des commandes exécutées par l'utilisateur"
+        echo "6. Droits/permissions de l’utilisateur sur un dossier"
+        echo "7. Droits/permissions de l’utilisateur sur un fichier" 
+        read -p "Choisissez une information " menu_user_info_choice
+;;
 esac
+
+#Appel des fonctions d'informations utilisateur 
+case $menu_user_info_choice in
+1)
+        last.sh;;
+2)
+        lastdate_passwd.sh;;
+3)
+        open_user_session.sh;;
+4)
+        user_groups.sh;;
+5)
+        allcommand_user.sh;;
+6)
+        access_folder.sh;;
+7)
+        acces_file.sh;;
+*)
+        echo "Veuillez entrer un choix correct"
+esac
+
+
+
+case $menu_computer_choice in
+# Menu Ordinateur Action
+1)
+        echo "----------------------"
+        echo "Menu des actions ordinateur"
+        echo "----------------------"
+        echo "1.action 1"
+        echo "2.action 2"
+        read -p "Que voulez-vous faire? " menu_action_computer_choice
+;;
+#Choix des actions à faire suite
+
+#Menu Ordinateur Informations
+2)
+	echo "---------------------"
+	echo "Menu des informations ordinateur"
+	echo "---------------------"
+	echo "1.information 1"
+	echo "2.information 2"
+	echo "3.information 3"
+	read -p "Que voulez-vous faire? "  menu_info_computer_choice
+;;
+#Choix des informations à faire suite
+esac
+
+
+
