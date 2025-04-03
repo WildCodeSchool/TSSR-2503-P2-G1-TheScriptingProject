@@ -1,29 +1,77 @@
 #!/bin/bash
 
+# Fonctions utilisés
+
+#Fonction de dernière connexion
+function last.sh()
+{
+	echo "Voici la date de dernière connexion :"
+bash ~/projet_script/last.sh
+}
+
+#Fonction de dernière modification de mot de passe
+function lastdate_passwd.sh()
+{
+	echo "Voici la dernière date de modification de mot de passe :"
+bash ~/projet_script/lastdate_passwd.sh
+}
+
+#Fonction de la liste des session ouvertes par un utilisateur
+function open_user_session.sh()
+{
+	echo "Voici la liste des sessions ouvertes par l'utilisateur"
+bash ~/projet_script/open_user_session.sh
+}
+
+
+#Fonction du groupe auquel appartient un utilisateur
+function user_groups.sh()
+{
+	echo "Voici le Groupe d'appartenance de l'utilisateur"
+bash ~/projet_script/user_groups.sh
+}
+
+
+#Fonction de l'historique des commandes exécutées par un utilisateur
+function allcommand_user.sh()
+{
+	echo "Voici l'Historique des commandes exécutées par l'utilisateur"
+bash ~/projet_script/allcommand_user.sh
+}
+
+
+#Fonction de visualisation des droits/permissions pour un utilisateur sur un dossier
+function access_folder.sh()
+{
+	echo "Voici les Droits/permissions de l’utilisateur sur un dossier"
+bash ~/projet_script/access_folder.sh
+}
+
+
+#Fonction de visualisation des droits/permissions pour un utilisateur sur un fichier
+function access_file.sh()
+{
+	echo "Voici les Droits/permissions de l’utilisateur sur un fichier"
+bash ~/projet_script/access_file.sh
+}
+
+
+#droits d'accès
 sudo chmod 744 ~/projet_script/reboot.sh
-
 sudo chmod 744 ~/projet_script/power.sh
-
 sudo chmod 744 ~/projet_script/last.sh
-
 sudo chmod 744 ~/projet_script/total_ram.sh
-
 sudo chmod 744 ~/projet_script/free_memory.sh
-
 sudo chmod 744 ~/projet_script/OS_version.sh
-
 sudo chmod 744 ~/projet_script/lastdate_passwd.sh
-
 sudo chmod 744 ~/projet_script/allcommand_user.sh
-
 sudo chmod 744 ~/projet_script/user_groups.sh
-
 sudo chmod 744 ~/projet_script/open_user_session.sh
-
 sudo chmod 744 ~/projet_script/access_folder.sh
-
 sudo chmod 744 ~/projet_script/access_file.sh
 
+
+#Menu Principal
 echo "----------------------"
 echo "Menu:"
 echo "----------------------"
@@ -31,6 +79,8 @@ echo "1.Utilisateur"
 echo "2.Ordinateur"
 read -p "choisissez une cible : " choice1
 
+
+#Menu Utilisateur
 case $choice1 in
 1)
 	echo "----------------------"
@@ -42,6 +92,8 @@ case $choice1 in
 esac
 
 
+
+#Menu Information
 case $choice2 in
 2)
 	echo "----------------------"
@@ -57,28 +109,22 @@ case $choice2 in
 	read -p "Choisissez une information " choice3
 esac
 
+#Appel des fonctions d'informations 
 case $choice3 in
 1)
-	echo "Voici la date de dernière connexion :"
-bash ~/projet_script/last.sh;;
+	last.sh;;
 2)
-	echo "Voici la dernière date de modification de mot de passe :"
-bash ~/projet_script/lastdate_passwd.sh;;
+	lastdate_passwd.sh;;
 3)
-	echo "Voici la liste des sessions ouvertes par l'utilisateur"
-bash ~/projet_script/open_user_session.sh;;
+	open_user_session.sh;;
 4)
-	echo "Voici le Groupe d’appartenance d’un utilisateur"
-bash ~/projet_script/user_groups.sh;;
+	user_groups.sh;;
 5)
-	echo "Voici l'Historique des commandes exécutées par l'utilisateur"
-bash ~/projet_script/allcommand_user.sh;;
+	allcommand_user.sh;;
 6)
-	echo "Voici les Droits/permissions de l’utilisateur sur un dossier"
-bash ~/projet_script/access_folder.sh;;
+	access_folder.sh;;
 7)
-	echo "Voici les Droits/permissions de l’utilisateur sur un fichier"
-bash ~/projet_script/acces_file.sh;;
+	acces_file.sh;;
 *)
 	echo "Veuillez entrer un choix correct"
 esac
