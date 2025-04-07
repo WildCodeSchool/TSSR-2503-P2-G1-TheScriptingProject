@@ -1,5 +1,5 @@
 #!/bin/bash
-^
+
 nomDuRepertoire=$nomDuRepertoire
 
 #Création d'un répertoire
