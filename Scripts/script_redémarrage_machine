@@ -8,7 +8,7 @@ case $Choix in
     yes) 
         echo "Confirmation du redémarrage"
         echo "Redémarrage de la machine en cours"
-        redémarrage ;;
+        reboot ;;
     no) 
         echo "Annulation du redémarrage"
         echo "Pas de redémarrage de la machine" ;;
