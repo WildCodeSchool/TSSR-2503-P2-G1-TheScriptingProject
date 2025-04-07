@@ -9,7 +9,7 @@ case $Choix in
     yes)
         echo "Confirmation arrêt machine"
         echo "Arrêt en cours"
-        Arrêt ;;
+        poweroff ;;
     no)
         echo "Annulation arrêt de la machine"
         echo "Pas d'arrêt" ;;

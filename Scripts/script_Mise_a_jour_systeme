@@ -2,6 +2,7 @@
 
 #Mise à jour du système
 echo "voulez-vous mettere à jour le systèmre? (yes/no)"
+
 #Lecture choix de la mise à jour
 read Choix
 case $Choix in
@@ -9,7 +10,7 @@ case $Choix in
     yes)
         echo "Mise à jour du système confirmé"
         echo "Mise à jour du systèeme en cours"
-        Mise à jour ;;
+        sudo apt update ;;
 
     no)
         echo "Mise à jour du système avorté"
