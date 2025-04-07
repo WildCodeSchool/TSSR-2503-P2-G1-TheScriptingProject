@@ -8,7 +8,7 @@ case $Choix in
     yes)
         echo "Confirmation du verrouillage"
         echo "Verrouillage en cours"
-        Verrouillage ;;
+        usermod -L ;;
     no) 
         echo "Annulation du verrouillage"
         echo "Pas de verrouillage" ;;
