@@ -8,7 +8,7 @@ read Choix
 case $Choix in
 
     yes)
-        echo "Mise à jour du système confirmé"
+        echo "Mise à jour du système confirmée"
         echo "Mise à jour du systèeme en cours"
         sudo apt update ;;
 
