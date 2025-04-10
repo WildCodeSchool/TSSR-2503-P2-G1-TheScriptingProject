@@ -27,6 +27,9 @@ function lastdate_connexion()
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        lastdate_connexion;;
     esac
 }
 
@@ -44,6 +47,9 @@ function lastdate_passwd()
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        lastdate_passwd;;
     esac
 }
 
@@ -61,6 +67,9 @@ function open_user_session()
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        open_user_session;;
     esac
 }
 
@@ -71,13 +80,16 @@ function user_groups()
         clear
         echo "Voici le Groupe d'appartenance de l'utilisateur :"
         id -Gn $user
-#	grep $user /etc/group
+#OU	grep $user /etc/group
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        user_groups;;
     esac
 }
 
@@ -94,6 +106,9 @@ function allcommand_user()
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        allcommand_user;;
     esac
 }
 
@@ -102,18 +117,27 @@ function allcommand_user()
 function access_folder()
 {
         clear
-        read -p "quel dossier voulez-vous voir ? "$1
-	cat ~/$1
-        echo "Voici les droits/permissions de l'utilisateur sur ce dossier"
-	chemin=~/Documents
-	ls -ld "$chemin"
-    read -p "vous voulez continuer ? [Oui/Non]" choix
+	cd ~/
+	read -p "Entrez le nom d'un dossier sur lequel vous voulez voir les droits/permissions: " folder
+        sudo find -type d -name "$folder"
+    if [ ! -d "$folder" ]
+    then
+	read -p "le dossier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
+    	access_folder
+    else
+        echo "Voici les droits/permissions de l'utilisateur sur ce dossier :"
+        ls -ld $folder
+        read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        access_folder;;
     esac
+    fi
 }
 
 
@@ -121,18 +145,27 @@ function access_folder()
 function access_file()
 {
         clear
-        read -p "quel fichier voulez-vous voir ? "$1
-        cat ~/$1
-        echo "Voici les droits/permissions de l'utilisateur sur ce fichier"
-        chemin=~/projet_script5.sh
-        ls -l "$chemin"
-    read -p "vous voulez continuer ? [Oui/Non]" choix
+	cd ~/
+        read -p "Entrez le nom d'un fichier sur lequel vous voulez voir les droits/permissions: " file
+        sudo find -type f -name "$file"
+    if [ ! -f "$file" ]
+    then
+        read -p "le fichier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
+        access_file
+    else
+        echo "Voici les droits/permissions de l'utilisateur sur ce fichier :"
+        ls -l $file
+    	read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_user_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        access_file;;
     esac
+    fi
 }
 
 #------------------------------------------------------------------------------------------------------------------
@@ -150,13 +183,16 @@ function os_version()
 {
 	clear
 	echo "Voici la version de l'OS :"
-	lsb_release -a 
+	lsb_release -a
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+	read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+	os_version;;
     esac
 }
 
@@ -173,6 +209,9 @@ function disk_number()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        disk_number;;
     esac
 }
 
@@ -189,6 +228,9 @@ function partition_info()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        partition_info;;
     esac
 }
 
@@ -205,6 +247,9 @@ function free_space()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        free_space;;
     esac
 }
 
@@ -215,13 +260,18 @@ function info_folder()
         clear
 	read -p "Entrez le nom d'un dossier sur lequel vous voulez des info ? " dossier
         echo "Voici le nom et l'espace disque du dossier :"
-        du -sh ~/$dossier
+	cd ~/
+	sudo find -type d -name "$dossier"
+	du -sh ~/$dossier
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        info_folder;;
     esac
 }
 
@@ -238,6 +288,9 @@ function mounted_drive_list()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        mounted_drive_list;;
     esac
 }
 
@@ -254,6 +307,9 @@ function pack_app_installed()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        pack_app_installed;;
     esac
 }
 
@@ -270,6 +326,9 @@ function serv_progress()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        serv_progress;;
     esac
 }
 
@@ -279,13 +338,16 @@ function local_users_list()
 {
         clear
         echo "Voici la liste des utilisateurs locaux :"
-        ######commande###########
+        getent passwd {1000..100000}
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        local_users_list;;
     esac
 }
 
@@ -302,6 +364,9 @@ function total_ram()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        total_ram;;
     esac
 }
 
@@ -318,6 +383,9 @@ function ram_used()
         info_computer_menu_choice ;;
     Non)
         exit 0 ;;
+    *)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        ram_used;;
     esac
 }
 
@@ -375,6 +443,9 @@ action_user_menu_choice ()
 		action 7;;
 	8)
 		user_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        action_user_menu_choice;;
 	esac
 }
 
@@ -409,9 +480,12 @@ info_user_menu_choice ()
  	6)
         	access_folder;;
  	7)
-        	acces_file;;
+        	access_file;;
 	8)
 		user_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        info_user_menu_choice;;
 	esac
 }
 
@@ -467,6 +541,9 @@ action_computer_menu_choice ()
 	;;
 	14)
 		computer_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        action_computer_menu_choice;;
         esac
 }
 
@@ -512,13 +589,16 @@ info_computer_menu_choice ()
 	8)
        		serv_progress;;
 	9)
-       		local_user_list;;
+       		local_users_list;;
 	10)
        		total_ram;;
 	11)
        		ram_used;;
 	12)
 		computer_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        info_computer_menu_choice;;
 	esac
 }
 
@@ -547,6 +627,9 @@ user_menu ()
         	info_user_menu_choice;;
 	3)
 	main_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        user_menu;;
 	esac
 }
 
@@ -570,6 +653,9 @@ computer_menu ()
 		info_computer_menu_choice;;
 	3)
 	main_menu;;
+	*)
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        computer_menu;;
         esac
 }
 
@@ -593,7 +679,8 @@ function main_menu ()
 	2)
       		computer_menu;;
 	*)
-        echo "Choix invalide, veuillez réessayer.";;
+        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+	main_menu;;
 	esac
 }
 main_menu
