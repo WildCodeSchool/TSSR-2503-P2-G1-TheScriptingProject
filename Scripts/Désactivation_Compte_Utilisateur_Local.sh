@@ -13,3 +13,5 @@ then
     
     #Vérifier la désactivation de l'utilisateur
     
+
+RECHERCHE DES COMMANDES POUR LA DESACTIVATION ET LA VERIFICATION 
