@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Vérifier le status du pare-feu
+echo "Vérification status du pare-feu"
 sudo ufw status
 
 #Désactivation du pare-feu
