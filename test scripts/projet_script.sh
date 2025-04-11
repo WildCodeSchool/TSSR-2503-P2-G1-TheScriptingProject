@@ -397,20 +397,23 @@ function ram_used()
 
 
 
+#-----------------------------------------------------------------------------------------------------------------
+#                                Fonctions utilisées SCRIPT
+#-----------------------------------------------------------------------------------------------------------------
+
+
+function user_event ()
+{
+	clear
+	echo "Voici les évènements de l'utilisateur : "
+	cd /var/log
+	journalctl --user
+}
 
 
 
 
 
-
-#-----------------------------------------------------------------------------------------------------------------------------------------
-#							Droits d'accès
-#-----------------------------------------------------------------------------------------------------------------------------------------
-sudo chmod 744 ~/projet_script/reboot.sh
-sudo chmod 744 ~/projet_script/power.sh
-sudo chmod 744 ~/projet_script/total_ram.sh
-sudo chmod 744 ~/projet_script/free_memory.sh
-sudo chmod 744 ~/projet_script/access_file.sh
 
 #-----------------------------------------------------------------------------------------------------------------------------------------
 #                                                 Fonctions sous sous-menu
@@ -422,14 +425,15 @@ action_user_menu_choice ()
 	clear
         echo "===== Menu des actions utilisateur ====="
         echo "                                        "
-        echo "1. action 1"
-        echo "2. action 2"
-        echo "3. action 3"
-        echo "4. action 4"
-        echo "5. action 5"
-        echo "6. action 6"
-        echo "7. action 7"
+        echo "1. Création de compte utilisateur local"
+        echo "2. Changement de mot de passe"
+        echo "3. Suppression de compte utilisateur local"
+        echo "4. Désactivation de compte utilisateur local"
+        echo "5. Ajout à un groupe d'administration"
+        echo "6. Ajout à un groupe local"
+        echo "7. Sortie d’un groupe local"
         echo "8. Retour au menu précédent"
+	echo "                                        "
         read -p "Que voulez-vous faire? " action_user_menu_choice
 
 	case $action_user_menu_choice in
@@ -469,7 +473,8 @@ info_user_menu_choice ()
         echo "5. Historique des commandes exécutées par l'utilisateur"
         echo "6. Droits/permissions de l’utilisateur sur un dossier"
         echo "7. Droits/permissions de l’utilisateur sur un fichier"
-	echo "8. Retour au menu précédent" 
+	echo "8. Retour au menu précédent"
+	echo "                                        "
         read -p "Choisissez une information " info_user_menu_choice
 
 	case $info_user_menu_choice in
@@ -502,20 +507,21 @@ action_computer_menu_choice ()
         clear
         echo "===== Menu des actions ordinateur ====="
         echo "                                       "
-        echo "1. action 1"
-        echo "2. action 2"
-        echo "3. action 3"
-        echo "4. action 4"
-        echo "5. action 5"
-        echo "6. action 6"
-        echo "7. action 7"
-	echo "8. action 8"
-	echo "9. action 9"
-	echo "10. action 10"
-	echo "11. action 11"
-	echo "12. action 12"
-	echo "13. action 13"
+        echo "1. Arrêt"
+        echo "2. Redémarrage"
+        echo "3. Verrouillage"
+        echo "4. Mise-à-jour du système"
+        echo "5. Création de répertoire"
+        echo "6. Modification de répertoire"
+        echo "7. Suppression de répertoire"
+	echo "8. Prise de main à distance (CLI)"
+	echo "9. Activation du pare-feu"
+	echo "10. Désactivation du pare-feu"
+	echo "11. Installation de logiciel"
+	echo "12. Désinstallation de logiciel"
+	echo "13. Exécution de script sur la machine distante"
         echo "14. Retour au menu précédent"
+	echo "                                       "
         read -p "Que voulez-vous faire? " action_computer_menu_choice
 
 	case $action_computer_menu_choice in
@@ -575,6 +581,7 @@ info_computer_menu_choice ()
         echo "10. Mémoire RAM totale"
         echo "11. Utilisation de la RAM"
         echo "12. Retour au menu précédent"
+	echo "                                        "
         read -p "Que voulez-vous faire? "  info_computer_menu_choice
 
 	case $info_computer_menu_choice in
@@ -622,6 +629,7 @@ user_menu ()
         echo "1. Une action"
         echo "2. Une information"
         echo "3. Retour au menu précédent"
+	echo "                            "
         read -p "Que voulez-vous faire? " user_menu_choice
 
 	case $user_menu_choice in
@@ -649,6 +657,7 @@ computer_menu ()
         echo "1. Une action"
         echo "2. Une information"
         echo "3. Retour au menu précédent"
+	echo "                           "
 	read -p "Que voulez-vous faire? " computer_menu_choice
 
 	case $computer_menu_choice in
@@ -667,6 +676,33 @@ computer_menu ()
 
 
 
+#Fonction du Menu Script
+script_menu ()
+{
+	clear
+	echo "===== Menu Script ====="
+	echo "                       "
+	echo "1. Recherche des évènements pour un utilisateur"
+	echo "2. Recherche des évènements pour un ordinateur"
+	echo "3. Retour au menu précédent"
+	echo "                       "
+	read -p "Que voulez-vous faire ? " script_menu_choice
+
+	case $script_menu_choice in
+	# Menu Script
+	1)
+		user_event;;
+	2)
+		computer_event;;
+	3)
+	main_menu;;
+	*)
+	read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+        script_menu;;
+        esac
+}
+
+
 #-----------------------------------------------------------------------------------------------------------------------------------------
 #								Menu Principal
 #-----------------------------------------------------------------------------------------------------------------------------------------
@@ -677,6 +713,8 @@ function main_menu ()
 	echo "                          "
 	echo "1. Menu Utilisateur"
 	echo "2. Menu Ordinateur"
+	echo "3. Menu Script"
+	echo "                          "
 	read -p "Choisissez votre cible : " main_choice
 
 	case $main_choice in
@@ -684,6 +722,8 @@ function main_menu ()
 		user_menu;;
 	2)
       		computer_menu;;
+	3)
+		script_menu;;
 	*)
         read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
 	main_menu;;
