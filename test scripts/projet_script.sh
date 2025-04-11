@@ -258,10 +258,15 @@ function free_space()
 function info_folder()
 {
         clear
-	read -p "Entrez le nom d'un dossier sur lequel vous voulez des info ? " dossier
-        echo "Voici le nom et l'espace disque du dossier :"
 	cd ~/
+	read -p "Entrez le nom d'un dossier sur lequel vous voulez des info ? " dossier
 	sudo find -type d -name "$dossier"
+     if [ ! -d "$dossier" ]
+	then
+	read -p "le dossier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
+	info_folder
+	else
+        	echo "Voici le nom et l'espace disque du dossier :"
 	du -sh ~/$dossier
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
@@ -273,6 +278,7 @@ function info_folder()
         read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
         info_folder;;
     esac
+    fi
 }
 
 
@@ -338,7 +344,7 @@ function local_users_list()
 {
         clear
         echo "Voici la liste des utilisateurs locaux :"
-        getent passwd {1000..100000}
+        sudo cat /etc/passwd | grep "/home"
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -416,13 +422,13 @@ action_user_menu_choice ()
 	clear
         echo "===== Menu des actions utilisateur ====="
         echo "                                        "
-        echo "1.action 1"
-        echo "2.action 2"
-        echo "3.action 3"
-        echo "4.action 4"
-        echo "5.action 5"
-        echo "6.action 6"
-        echo "7.action 7"
+        echo "1. action 1"
+        echo "2. action 2"
+        echo "3. action 3"
+        echo "4. action 4"
+        echo "5. action 5"
+        echo "6. action 6"
+        echo "7. action 7"
         echo "8. Retour au menu précédent"
         read -p "Que voulez-vous faire? " action_user_menu_choice
 
@@ -496,19 +502,19 @@ action_computer_menu_choice ()
         clear
         echo "===== Menu des actions ordinateur ====="
         echo "                                       "
-        echo "1.action 1"
-        echo "2.action 2"
-        echo "3.action 3"
-        echo "4.action 4"
-        echo "5.action 5"
-        echo "6.action 6"
-        echo "7.action 7"
-	echo "8.action 8"
-	echo "9.action 9"
-	echo "10.action 10"
-	echo "11.action 11"
-	echo "12.action 12"
-	echo "13.action 13"
+        echo "1. action 1"
+        echo "2. action 2"
+        echo "3. action 3"
+        echo "4. action 4"
+        echo "5. action 5"
+        echo "6. action 6"
+        echo "7. action 7"
+	echo "8. action 8"
+	echo "9. action 9"
+	echo "10. action 10"
+	echo "11. action 11"
+	echo "12. action 12"
+	echo "13. action 13"
         echo "14. Retour au menu précédent"
         read -p "Que voulez-vous faire? " action_computer_menu_choice
 
@@ -557,15 +563,15 @@ info_computer_menu_choice ()
 	clear
         echo "===== Menu des informations ordinateur ====="
         echo "                                            "
-        echo "1.Version de l'OS"
-        echo "2.Nombre de disque"
-        echo "3.Partition (nombre, nom, FS, taille) par disque"
-        echo "4.Espace disque restant par partition/volume"
-        echo "5.Nom et espace disque d'un dossier (nom de dossier demandé)"
-        echo "6.Liste des lecteurs monté (disque, CD, etc.)"
-        echo "7.Liste des applications/paquets installées"
+        echo "1. Version de l'OS"
+        echo "2. Nombre de disque"
+        echo "3. Partition (nombre, nom, FS, taille) par disque"
+        echo "4. Espace disque restant par partition/volume"
+        echo "5. Nom et espace disque d'un dossier (nom de dossier demandé)"
+        echo "6. Liste des lecteurs monté (disque, CD, etc.)"
+        echo "7. Liste des applications/paquets installées"
         echo "8. Liste des services en cours d'execution"
-        echo "9.Liste des utilisateurs locaux"
+        echo "9. Liste des utilisateurs locaux"
         echo "10. Mémoire RAM totale"
         echo "11. Utilisation de la RAM"
         echo "12. Retour au menu précédent"
@@ -613,9 +619,9 @@ user_menu ()
 	clear
         echo "===== Menu Utilisateur ====="
         echo "                            "
-        echo "1.Une action"
-        echo "2.Une information"
-        echo "3.Retour au menu précédent"
+        echo "1. Une action"
+        echo "2. Une information"
+        echo "3. Retour au menu précédent"
         read -p "Que voulez-vous faire? " user_menu_choice
 
 	case $user_menu_choice in
@@ -640,8 +646,8 @@ computer_menu ()
 	clear
         echo "===== Menu Ordinateur ====="
         echo "                           "
-        echo "1.Une action"
-        echo "2.Une information"
+        echo "1. Une action"
+        echo "2. Une information"
         echo "3. Retour au menu précédent"
 	read -p "Que voulez-vous faire? " computer_menu_choice
 
