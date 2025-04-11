@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Demander quel logiciel est à désinstaller
+
+echo "Quel logiciel souhaitez-vous désinstaller?"
+read app
+
+#Lancer la désinstallation
+echo "Désinstallation du logiciel"
+sudo apt purge $app
