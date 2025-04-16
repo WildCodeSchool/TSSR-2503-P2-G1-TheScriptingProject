@@ -4,7 +4,7 @@
 #				Fonctions utilisées ACTIONS UTILISATEUR
 #----------------------------------------------------------------------------------------------------------------------
 #Fonction de création de compte utilisateur local
-function Creating a local user account()
+function creating a local user account()
 {
     #Demande Nom du nouvel utilisateur à créer
     echo " Quel est le nom du nouvel utilisateur?"
@@ -31,7 +31,7 @@ exit 0
 
 
 #Fonction Changement de mot de passe
-function Change password ()
+function change password ()
 {
     #Changement du mot de passe
     echo "Entrer le nom de l'utilisateur"
@@ -51,7 +51,7 @@ exit 0
 
 
 #Fonction de la suppression de compte utilisateur local
-function Deleting a local user account ()
+function deleting a local user account ()
 {
     #Donner le nom de l'utilisateur à supprimer
     echo "Quel est le nom de l'utilisateur à supprimer?"
@@ -80,7 +80,7 @@ exit 0
 
 
 #Fonction de la désactivation de compte utilisateur local
-function Local user account deactivation ()
+function local user account deactivation ()
 {
     #Donner le nom de l'utilisateur à Désactiver
     echo "Donner le nom utilisateur à désacitver"
@@ -103,7 +103,7 @@ exit 0
 
 
 #Fonction d'ajout à un groupe d'administration
-function Adding to an administration group ()
+function adding to an administration group ()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous ajouter au groupe administrateur?"
@@ -128,7 +128,7 @@ exit 0
 
 
 #Fonction d'ajout à un groupe local
-function Adding to a local group ()
+function adding to a local group ()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous ajouter à un groupe?"
@@ -156,7 +156,7 @@ exit 0
 
 
 #Fonction de sortie d’un groupe local
-function Local band release ()
+function local band release ()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous supprimer d'un groupe?"
@@ -488,7 +488,7 @@ exit 0
 
 
 #Fonction de prise de main à distance (CLI)
-function Remote Control (CLI) ()
+function remote control (CLI) ()
 {
     #Demande utilisateur
     echo "Avec quel utilisateur souhaitez-vous être connecté?"
@@ -506,7 +506,7 @@ exit 0
 
 
 #Fonction d'activation du pare-feu
-function Enabling the firewall ()
+function enabling the firewall ()
 {
     #Vérifier le status du pare-feu
     echo "Vérification status du pare-feu"
@@ -967,7 +967,7 @@ action_computer_menu_choice ()
 	4)
         system update;;
 	5)
-        Directory creation;;
+        directory creation;;
 	6)
         directory modification;;
 	7)
@@ -975,7 +975,7 @@ action_computer_menu_choice ()
 	8)
         remote control (CLI);;
 	9)
-        Enabling the firewall;;
+        enabling the firewall;;
 	10)
         disabling the firewall;;
 	11)
