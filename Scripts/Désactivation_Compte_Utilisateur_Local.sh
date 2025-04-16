@@ -5,13 +5,15 @@ echo "Donner le nom utilisateur à désacitver"
 read $name_user
 
 #Vérifier si l'utilisateur existe 
-if cat /etc/passwd | grep $name_user > /dev/null
+if cat /etc/passwd | grep "$name_user" > /dev/null
 then
     #Désactiver l'utilisateur
     echo "Désactivation de l'utilisateur"
-    usermod -L
-    
-    #Vérifier la désactivation de l'utilisateur
-    
-
-RECHERCHE DES COMMANDES POUR LA DESACTIVATION ET LA VERIFICATION 
+    sudo usermod -L
+    echo "Utilisateur désactivé"
+else
+    #Problème de désactivation
+    echo "Le nom utilisateur n'existe pas"
+    exit 1
+fi
+exit 0
