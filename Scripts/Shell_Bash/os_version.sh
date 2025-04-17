@@ -4,9 +4,7 @@ clear
 echo "Voici la version de l'OS :"
 lsb_release -a
 
-trigger=true
-while $trigger -eq true; 
-do
+
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
         Oui)
@@ -17,5 +15,4 @@ do
         *)
 	        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer" ;;
     esac
-done
 
