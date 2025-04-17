@@ -566,7 +566,7 @@ exit 0
 
 
 #Fonction de désinstallation de logiciel
-Fonction software uninstallation ()
+function software uninstallation ()
 {
     #Demander quel logiciel est à désinstaller
     echo "Quel logiciel souhaitez-vous désinstaller?"
