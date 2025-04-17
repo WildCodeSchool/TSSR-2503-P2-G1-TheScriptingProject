@@ -40,7 +40,21 @@
 #Fonction du Menu Script
 
 
+function os_version() {
+    
+    ssh wilder@UBU02 < ./os_version.sh
+    read -p "vous voulez continuer ? [Oui/Non]" choix
+    case $choix in
+        Oui)
+            main_menu ;;
+        Non)
+            exit 0;;
+        *)
+	        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer" 
+            os_version;;
+    esac
 
+}
 #-----------------------------------------------------------------------------------------------------------------------------------------
 #								Menu Principal
 #-----------------------------------------------------------------------------------------------------------------------------------------
@@ -57,7 +71,7 @@ function main_menu ()
 
 	case $main_choice in
 	1)
-		ssh wilder@UBU02 < ./os_version.sh ;;
+		;;
 	2)
         ;;
 	3)
