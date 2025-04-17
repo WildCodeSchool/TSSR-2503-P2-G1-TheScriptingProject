@@ -103,7 +103,7 @@ exit 0
 
 
 #Fonction d'ajout à un groupe d'administration
-function adding to an administration group ()
+function adding to an administration group()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous ajouter au groupe administrateur?"
@@ -128,7 +128,7 @@ exit 0
 
 
 #Fonction d'ajout à un groupe local
-function adding to a local group ()
+function adding to a local group()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous ajouter à un groupe?"
@@ -156,7 +156,7 @@ exit 0
 
 
 #Fonction de sortie d’un groupe local
-function local band release ()
+function local band release()
 {
     #Demander le nom utilisateur
     echo "Quel utilisateur souhaitez-vous supprimer d'un groupe?"
@@ -190,9 +190,9 @@ exit 0
 #Fonction de dernière connexion
 function lastdate_connexion()
 {
-        clear
-        echo "Voici la date de dernière connexion :"
-        last -1 $user
+    clear
+    echo "Voici la date de dernière connexion :"
+    last -1 $user
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -207,12 +207,11 @@ function lastdate_connexion()
 
 
 #Fonction de dernière modification de mot de passe
-
 function lastdate_passwd()
 {
-        clear
-        echo "Voici la dernière date de modification de mot de passe :"
-        passwd -s
+    clear
+    echo "Voici la dernière date de modification de mot de passe :"
+    passwd -s
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -227,12 +226,11 @@ function lastdate_passwd()
 
 
 #Fonction de la liste des session ouvertes par un utilisateur
-
 function open_user_session()
 {
-        clear
-        echo "Voici la liste des sessions ouvertes par l'utilisateur :"
-        who -u | grep "$user"
+    clear
+    echo "Voici la liste des sessions ouvertes par l'utilisateur :"
+    who -u | grep "$user"
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -249,10 +247,10 @@ function open_user_session()
 #Fonction du groupe auquel appartient un utilisateur
 function user_groups()
 {
-        clear
-        echo "Voici le Groupe d'appartenance de l'utilisateur :"
-        id -Gn $user
-#OU	grep $user /etc/group
+    clear
+    echo "Voici le Groupe d'appartenance de l'utilisateur :"
+    id -Gn $user
+    #OU	grep $user /etc/group
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -269,9 +267,9 @@ function user_groups()
 #Fonction de l'historique des commandes exécutées par un utilisateur
 function allcommand_user()
 {
-        clear
-        echo "Voici l'historique des commandes exécutées par l'utilisateur :"
-        cat ~/.bash_history
+    clear
+    echo "Voici l'historique des commandes exécutées par l'utilisateur :"
+    cat ~/.bash_history
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -288,10 +286,10 @@ function allcommand_user()
 #Fonction de visualisation des droits/permissions pour un utilisateur sur un dossier
 function access_folder()
 {
-        clear
+    clear
 	cd ~/
 	read -p "Entrez le nom d'un dossier sur lequel vous voulez voir les droits/permissions: " folder
-        sudo find -type d -name "$folder"
+    sudo find -type d -name "$folder"
     if [ ! -d "$folder" ]
     then
 	read -p "le dossier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
@@ -300,15 +298,15 @@ function access_folder()
         echo "Voici les droits/permissions de l'utilisateur sur ce dossier :"
         ls -ld $folder
         read -p "vous voulez continuer ? [Oui/Non]" choix
-    case $choix in
-    Oui)
-        info_user_menu_choice ;;
-    Non)
-        exit 0 ;;
-    *)
-        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
-        access_folder;;
-    esac
+        case $choix in
+        Oui)
+            info_user_menu_choice ;;
+        Non)
+            exit 0 ;;
+        *)
+            read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+            access_folder;;
+        esac
     fi
 }
 
@@ -316,10 +314,10 @@ function access_folder()
 #Fonction de visualisation des droits/permissions pour un utilisateur sur un fichier
 function access_file()
 {
-        clear
+    clear
 	cd ~/
-        read -p "Entrez le nom d'un fichier sur lequel vous voulez voir les droits/permissions: " file
-        sudo find -type f -name "$file"
+    read -p "Entrez le nom d'un fichier sur lequel vous voulez voir les droits/permissions: " file
+    sudo find -type f -name "$file"
     if [ ! -f "$file" ]
     then
         read -p "le fichier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
@@ -328,15 +326,15 @@ function access_file()
         echo "Voici les droits/permissions de l'utilisateur sur ce fichier :"
         ls -l $file
         read -p "vous voulez continuer ? [Oui/Non]" choix
-    case $choix in
-    Oui)
-        info_user_menu_choice ;;
-    Non)
-        exit 0 ;;
-    *)
-        read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
-        access_file;;
-    esac
+        case $choix in
+        Oui)
+            info_user_menu_choice ;;
+        Non)
+            exit 0 ;;
+        *)
+            read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
+            access_file;;
+        esac
     fi
 }
 
@@ -344,7 +342,7 @@ function access_file()
 #				 Fonctions utilisées ACTIONS ORDINATEUR
 #------------------------------------------------------------------------------------------------------------------
 #Fonction Arrêt ordinateur
-function computer shutdown ()
+function computer shutdown()
 {
     #Arrêt Machine
     echo "Confirmation arrêt machine (yes/no)"
@@ -365,7 +363,7 @@ exit 0
 
 
 #Fonction de redémarrage de l'ordinateur
-function restart computer ()
+function restart computer()
 {
     #Redémarrage de la machine
     echo "Confirmation du redémarrage (yes/no)"
@@ -385,7 +383,7 @@ exit 0
 
 
 #Fonction de verrouillage #Redémarrage de la machine
-function computer lock ()
+function computer lock()
 {
     #Verrouillage de la machine
     echo "Confirmation du verrouillage (yes/no)"
@@ -405,7 +403,7 @@ exit 0
 
 
 #Fonction de mise-à-jour du système
-function system Update ()
+function system Update()
 {
     #Mise à jour du système
     echo "voulez-vous mettre à jour le système? (yes/no)"
@@ -426,7 +424,7 @@ exit 0
 
 
 #Fonction de création de répertoire
-function directory creation ()
+function directory creation()
 {
     nomDuRepertoire=$nomDuRepertoire
 
@@ -447,7 +445,7 @@ exit 0
 
 
 #Fonction de modification de répertoire
-function directory modification ()
+function directory modification()
 {
     #Nom du répertoire
     echo "Quel est le nom du répertoire à modifier?"
@@ -469,7 +467,7 @@ exit 0
 
 
 #Fonctione de suppression de répertoire
-function directory deletion ()
+function directory deletion()
 {
     #Récupérer le nom du répertoire à supprimer
     echo "Quel est le répertoire à supprimer?"
@@ -488,7 +486,7 @@ exit 0
 
 
 #Fonction de prise de main à distance (CLI)
-function remote control (CLI) ()
+function remote control (CLI)()
 {
     #Demande utilisateur
     echo "Avec quel utilisateur souhaitez-vous être connecté?"
@@ -506,7 +504,7 @@ exit 0
 
 
 #Fonction d'activation du pare-feu
-function enabling the firewall ()
+function enabling the firewall()
 {
     #Vérifier le status du pare-feu
     echo "Vérification status du pare-feu"
@@ -529,7 +527,7 @@ exit 0
 
 
 #Fonction de désactivation du pare-feu
-function disabling the firewall ()
+function disabling the firewall()
 {
     #Vérifier le status du pare-feu
     echo "Vérification status du pare-feu"
@@ -552,7 +550,7 @@ exit 0
 
 
 #Fonction d'installation de logiciel
-function software installation ()
+function software installation()
 {
     #Demander le nom du logiiciel à installer
     echo "Quel logiciel souhaitez-vous installer?"
@@ -566,7 +564,7 @@ exit 0
 
 
 #Fonction de désinstallation de logiciel
-function software uninstallation ()
+function software uninstallation()
 {
     #Demander quel logiciel est à désinstaller
     echo "Quel logiciel souhaitez-vous désinstaller?"
@@ -580,7 +578,7 @@ exit 0
 
 
 #Fonction d'exécution de script sur la machine distante
-function Script execution on remote machine ()
+function Script execution on remote machine()
 {
     #Demande nom utilisateur
     echo "Quel utilisateur souhaitez-vous connecté?"
@@ -633,9 +631,9 @@ function os_version()
 #Fonction nombre de disque
 function disk_number()
 {
-        clear
-        echo "Voici le nombre de disque :"
-        lsblk
+    clear
+    echo "Voici le nombre de disque :"
+    lsblk
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -652,9 +650,9 @@ function disk_number()
 #Fonction info partition
 function partition_info()
 {
-        clear
-        echo "Voici le détail des partitions :"
-        fdisk -l
+    clear
+    echo "Voici le détail des partitions :"
+    fdisk -l
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -671,9 +669,9 @@ function partition_info()
 #Fonction espace disque restant
 function free_space()
 {
-        clear
-        echo "Voici l'espace disque restant :"
-        df -h
+    clear
+    echo "Voici l'espace disque restant :"
+    df -h
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -690,7 +688,7 @@ function free_space()
 #Fonction nom et espace disque d'un dossier
 function info_folder()
 {
-        clear
+    clear
 	cd ~/
 	read -p "Entrez le nom d'un dossier sur lequel vous voulez des info ? " dossier
 	sudo find -type d -name "$dossier"
@@ -718,9 +716,9 @@ function info_folder()
 #Fonction liste des lecteurs montés
 function mounted_drive_list()
 {
-        clear
-        echo "Voici la liste des lecteurs montés :"
-        findmnt
+    clear
+    echo "Voici la liste des lecteurs montés :"
+    findmnt
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -737,9 +735,9 @@ function mounted_drive_list()
 #Fonction liste des applications/paquets installées
 function pack_app_installed()
 {
-        clear
-        echo "Voici la liste des applications/paquets installées :"
-        apt --installed list
+    clear
+    echo "Voici la liste des applications/paquets installées :"
+    apt --installed list
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -756,9 +754,9 @@ function pack_app_installed()
 #Fonction liste des services en cours d'exécution
 function serv_progress()
 {
-        clear
-        echo "Voici la liste des services en cours d'exécution :"
-        systemctl list-units --type=service
+    clear
+    echo "Voici la liste des services en cours d'exécution :"
+    systemctl list-units --type=service
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -775,9 +773,9 @@ function serv_progress()
 #Fonction liste des utilisateurs locaux
 function local_users_list()
 {
-        clear
-        echo "Voici la liste des utilisateurs locaux :"
-        sudo cat /etc/passwd | grep "/home"
+    clear
+    echo "Voici la liste des utilisateurs locaux :"
+    sudo cat /etc/passwd | grep "/home"
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -794,9 +792,9 @@ function local_users_list()
 #Fonction mémoire RAM totale
 function total_ram()
 {
-        clear
-        echo "Voici la mémoire RAM total :"
-        lshw -c memory
+    clear
+    echo "Voici la mémoire RAM total :"
+    lshw -c memory
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -813,9 +811,9 @@ function total_ram()
 #Fonction utilisation de la RAM
 function ram_used()
 {
-        clear
-        echo "Voici la mémoire RAM total :"
-        free -h
+    clear
+    echo "Voici la mémoire RAM total :"
+    free -h
     read -p "vous voulez continuer ? [Oui/Non]" choix
     case $choix in
     Oui)
@@ -856,18 +854,18 @@ function user_event ()
 action_user_menu_choice ()
 {
 	clear
-        echo "===== Menu des actions utilisateur ====="
-        echo "                                        "
-        echo "1. Création de compte utilisateur local"
-        echo "2. Changement de mot de passe"
-        echo "3. Suppression de compte utilisateur local"
-        echo "4. Désactivation de compte utilisateur local"
-        echo "5. Ajout à un groupe d'administration"
-        echo "6. Ajout à un groupe local"
-        echo "7. Sortie d’un groupe local"
-        echo "8. Retour au menu précédent"
+    echo "===== Menu des actions utilisateur ====="
+    echo "                                        "
+    echo "1. Création de compte utilisateur local"
+    echo "2. Changement de mot de passe"
+    echo "3. Suppression de compte utilisateur local"
+    echo "4. Désactivation de compte utilisateur local"
+    echo "5. Ajout à un groupe d'administration"
+    echo "6. Ajout à un groupe local"
+    echo "7. Sortie d’un groupe local"
+    echo "8. Retour au menu précédent"
 	echo "                                        "
-        read -p "Que voulez-vous faire? " action_user_menu_choice
+    read -p "Que voulez-vous faire? " action_user_menu_choice
 
 	case $action_user_menu_choice in
 	1)
@@ -894,21 +892,21 @@ action_user_menu_choice ()
 
 
 #Fonction du sous Menu des informations utilisateur
-info_user_menu_choice ()
+function_info_user_menu_choice ()
 {
 	clear
-        echo "===== Menu des informations utilisateur ====="
-        echo "                                             "
-        echo "1. Date de dernière connexion"
-        echo "2. Date de dernière modification de mot de passe"
-        echo "3. Liste des sessions ouvertes par l'utilisateur"
-        echo "4. Groupe d’appartenance d’un utilisateur"
-        echo "5. Historique des commandes exécutées par l'utilisateur"
-        echo "6. Droits/permissions de l’utilisateur sur un dossier"
-        echo "7. Droits/permissions de l’utilisateur sur un fichier"
+    echo "===== Menu des informations utilisateur ====="
+    echo "                                             "
+    echo "1. Date de dernière connexion"
+    echo "2. Date de dernière modification de mot de passe"
+    echo "3. Liste des sessions ouvertes par l'utilisateur"
+    echo "4. Groupe d’appartenance d’un utilisateur"
+    echo "5. Historique des commandes exécutées par l'utilisateur"
+    echo "6. Droits/permissions de l’utilisateur sur un dossier"
+    echo "7. Droits/permissions de l’utilisateur sur un fichier"
 	echo "8. Retour au menu précédent"
 	echo "                                        "
-        read -p "Choisissez une information " info_user_menu_choice
+    read -p "Choisissez une information " info_user_menu_choice
 
 	case $info_user_menu_choice in
 	1)
@@ -935,27 +933,27 @@ info_user_menu_choice ()
 
 #Fonction du sous Menu des actions Ordinateur
 
-action_computer_menu_choice ()
+function_action_computer_menu_choice ()
 {
-        clear
-        echo "===== Menu des actions ordinateur ====="
-        echo "                                       "
-        echo "1. arrêt ordinateur"
-        echo "2. redémarrage ordinateur"
-        echo "3. verrouillage ordinateur"
-        echo "4. Mise-à-jour du système"
-        echo "5. création de répertoire"
-        echo "6. modification de répertoire"
-        echo "7. suppression de répertoire"
-	echo "8. prise de main à distance (CLI)"
-	echo "9. activation du pare-feu"
-	echo "10. désactivation du pare-feu"
-	echo "11. installation de logiciel"
-	echo "12. désinstallation de logiciel"
-	echo "13. exécution de script sur la machine distante"
-        echo "14. retour au menu précédent"
-	echo "                                       "
-        read -p "Que voulez-vous faire? " action_computer_menu_choice
+    clear
+    echo "===== Menu des actions ordinateur ====="
+    echo "                                       "
+    echo "1. arrêt ordinateur"
+    echo "2. redémarrage ordinateur"
+    echo "3. verrouillage ordinateur"
+    echo "4. Mise-à-jour du système"
+    echo "5. création de répertoire"
+    echo "6. modification de répertoire"
+    echo "7. suppression de répertoire"
+    echo "8. prise de main à distance (CLI)"
+    echo "9. activation du pare-feu"
+    echo "10. désactivation du pare-feu"
+    echo "11. installation de logiciel"
+    echo "12. désinstallation de logiciel"
+    echo "13. exécution de script sur la machine distante"
+    echo "14. retour au menu précédent"
+    echo "                                       "
+    read -p "Que voulez-vous faire? " action_computer_menu_choice
 
 	case $action_computer_menu_choice in
 	1)
@@ -997,7 +995,7 @@ action_computer_menu_choice ()
 
 #Fonction du sous Menu des informations Ordinateur
 
-info_computer_menu_choice ()
+function_info_computer_menu_choice ()
 {
 	clear
         echo "===== Menu des informations ordinateur ====="
@@ -1054,7 +1052,7 @@ info_computer_menu_choice ()
 #------------------------------------------------------------------------------------------------------------------------------
 
 #Fonction du Menu Utilisateur
-user_menu ()
+function_user_menu ()
 {
 	clear
         echo "===== Menu Utilisateur ====="
@@ -1082,7 +1080,7 @@ user_menu ()
 
 
 #Fonction du Menu Ordinateur
-computer_menu ()
+function_computer_menu ()
 {
 	clear
         echo "===== Menu Ordinateur ====="
@@ -1110,7 +1108,7 @@ computer_menu ()
 
 
 #Fonction du Menu Script
-script_menu ()
+function_script_menu ()
 {
 	clear
 	echo "===== Menu Script ====="
