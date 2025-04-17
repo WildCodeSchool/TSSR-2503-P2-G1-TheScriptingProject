@@ -40,25 +40,25 @@
 
 | Membre         | Rôle          | Missions                                                                   |
 | -------------- | ------------- | -------------------------------------------------------------------------- |
-|  | Product Owner | |
-|   | Scrum Master  |  |
-|    | Technicien    | |
+|   Tatiana     | Product Owner | |
+|   Lloyd       | Scrum Master  |  |
+|   John        | Technicien    | |
 
 ### Sprint 2
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|  | Scrum Master  |  |
-|  | Technicien    |  |
-|    | Product Owner |  |
+|   John         | Scrum Master  |  |
+|   Tatiana      | Technicien    |  |
+|   Lloyd        | Product Owner |  |
 
 ### Sprint 3
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|  | Scrum Master  |  |
-|  | Technicien    |  |
-|    | Product Owner |  |
+|   Tatiana      | Scrum Master  |  |
+|   Lloyd        | Technicien    |  |
+|   John         | Product Owner |  |
 
 ### Sprint 4
 
