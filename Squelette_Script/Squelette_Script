@@ -871,19 +871,19 @@ action_user_menu_choice ()
 
 	case $action_user_menu_choice in
 	1)
-		Creating a local user account;;
+		Creating_a_local_user_account;;
 	2)
-		Change password;;
+		Change_password;;
 	3)
-		Deleting a local user account;;
+		Deleting_a_local_user_account;;
 	4)
-		Local user account deactivation;;
+		Local_user_account_deactivation;;
 	5)
-		Adding to an administration group;;
+		Adding_to_an_administration_group;;
 	6)
-		Adding to a local group;;
+		Adding_to_a_local_group;;
 	7)
-		Local band release;;
+		Local_band_release;;
 	8)
 		user_menu;;
 	*)
@@ -959,31 +959,31 @@ action_computer_menu_choice ()
 
 	case $action_computer_menu_choice in
 	1)
-        computer shutdown;;
+        computer_shutdown;;
 	2)
-        restart computer;;
+        restart_computer;;
 	3)
-        computer lock;;
+        computer_lock;;
 	4)
-        system update;;
+        system_update;;
 	5)
-        directory creation;;
+        directory_creation;;
 	6)
-        directory modification;;
+        directory_modification;;
 	7)
-        directory deletion;;
+        directory_deletion;;
 	8)
-        remote control (CLI);;
+        remote_control_(CLI);;
 	9)
-        enabling the firewall;;
+        enabling_the_firewall;;
 	10)
-        disabling the firewall;;
+        disabling_the_firewall;;
 	11)
-        software installation;;
+        software_installation;;
 	12)
-        software uninstallation;;
+        software_uninstallation;;
 	13)
-        script execution on the remote machine;;
+        script_execution_on_the_remote_machine;;
 	14)
 		computer_menu;;
 	*)
