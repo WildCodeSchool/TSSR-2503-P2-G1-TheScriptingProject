@@ -57,11 +57,11 @@ function main_menu ()
 
 	case $main_choice in
 	1)
-		 ;;
+		ssh wilder@UBU02 < ./os_version.sh ;;
 	2)
-         ;;
+        ;;
 	3)
-		 ;;
+		;;
 	*)
         read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
 	    main_menu ;;
