@@ -3,8 +3,8 @@
 
 echo "Confirmation du redémarrage (yes/no)"
 #Lecture du choix de redémarrage
-read Choix
-case $Choix in
+read choix
+case $choix in
     yes) 
         echo "Confirmation du redémarrage"
         echo "Redémarrage de la machine en cours"

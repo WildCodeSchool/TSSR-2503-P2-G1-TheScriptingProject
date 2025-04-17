@@ -2,15 +2,15 @@
 
 #Donner le nom de l'utilisateur à supprimer
 echo "Quel est le nom de l'utilisateur à supprimer?"
-read userName
+read user_name
 
 #Vérifier l'existence de l'utilisateur
-if cat /etc/passwd | grep $userName > /dev/null
+if cat /etc/passwd | grep $user_name > /dev/null
 then
     echo "Suppression de l'utilisateur en cours"
-    sudo userdel $userName
+    sudo userdel $user_name
     #Vérifier la suppression de l'utilisateur
-    if cat etc/passwd | grep $userName > /dev/null
+    if cat etc/passwd | grep $user_name > /dev/null
     then
         echo "ERREUR utilisateur non supprimé"
     else 

@@ -2,12 +2,12 @@
 
 #Récupérer le nom du répertoire à supprimer
 echo "Quel est le répertoire à supprimer?"
-read nomDuRepertoire
+read nom_du_rpertoire
 
 #Vérifier si le répertoire existe
-if [ -e $nomDuRepertoire ]
+if [ -e $nom_du_rpertoire ]
 then 
-    rm -r $nomDuRepertoire
+    rm -r $nom_du_rpertoire
     echo "Le répertoire a été supprimer"
 else
     echo "Le répertoire n'existe pas"

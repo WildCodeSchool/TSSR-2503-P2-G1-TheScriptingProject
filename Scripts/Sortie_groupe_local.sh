@@ -2,17 +2,17 @@
 
 #Demander le nom utilisateur
 echo "Quel utilisateur souhaitez-vous supprimer d'un groupe?"
-read userName
+read user_name
 #Vérifier si l'utilisateur existe
-if cat /etc/passwd | grep $userName > /dev/null
+if cat /etc/passwd | grep $user_name > /dev/null
 then
         #Demander le nom du groupe
         echo "Dans quel groupe souhaitez-vous le supprimer?"
-        read nameGroup
+        read name_group
         #Suppression de l'utisateur du groupe
-        sudo gpasswd -d $userName $nameGroup
+        sudo gpasswd -d $user_name $name_group
         #Vérifier si l'utilisateur est bien dans le groupe demandé
-        if groups $userName
+        if groups $user_name
         then
                 echo "L'utilisateur a bien été supprimé"
         fi

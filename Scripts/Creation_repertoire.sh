@@ -1,11 +1,11 @@
 #!/bin/bash
 
-nomDuRepertoire=$nomDuRepertoire
+nom_du_repertoire=$nom_du_repertoire
 
 #Création d'un répertoire
 echo "Donner le nom du répertoire à créer"
-read nomDuRepertoire
-mkdir $nomDuRepertoire
+read nom_du_repertoire
+mkdir $nom_du_repertoire
 
 #Vérification de l'existence d'un répertoire du même nom
 if [ $? = 0 ]

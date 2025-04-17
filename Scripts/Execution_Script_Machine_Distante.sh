@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Demande nom utilisateur
-echo "Quel utilisateur souhaitez-vous connecté?"
+echo "Quel utilisateur souhaitez-vous connecter?"
 read user
 
 #Demande nom de la machine
@@ -13,12 +13,12 @@ ssh "$user"@"$computer"
 
 #Demande nom du script
 echo "Quel script souhaitez-vous exécuter? (Noter le chemin complet jusqu'au script)"
-read nameScript
+read name_script
 
 #Exécution du script 
-if [ -e $nameScript ]
+if [ -e $name_script ]
 then 
-    ./$nameScript
+    ./$name_script
 else
     echo "Le script n'existe pas"
     exit 1

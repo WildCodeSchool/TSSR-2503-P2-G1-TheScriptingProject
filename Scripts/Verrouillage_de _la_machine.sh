@@ -3,8 +3,8 @@
 #Verrouillage de la machine
 echo "Confirmation du verrouillage (yes/no)"
 #Lecture du choix de verrouillage
-read Choix 
-case $Choix in
+read choix 
+case $choix in
     yes)
         echo "Confirmation du verrouillage"
         echo "Verrouillage en cours"

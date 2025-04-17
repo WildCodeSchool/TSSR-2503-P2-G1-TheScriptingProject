@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Vérifier le status du pare-feu
-echo "Vérification status du pare-feu"
+echo "Vérification statut du pare-feu"
 sudo ufw status
 
 #Activation du pare-feu

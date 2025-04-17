@@ -1,17 +1,17 @@
 #!/bin/bash
 
-#Arrêt Machine
+#Arrêt ordinateur
 
-echo "Confirmation arrêt machine (yes/no)"
+echo "Confirmationde de l'arrêt de l'ordinateur (yes/no)"
 #Confirmation ou non de l'arrêt
-read Choix
-case $Choix in
+read choix
+case $choix in
     yes)
-        echo "Confirmation arrêt machine"
+        echo "Confirmation de l'arrêt de l'ordinateur"
         echo "Arrêt en cours"
         poweroff ;;
     no)
-        echo "Annulation arrêt de la machine"
+        echo "Annulation de l'arrêt de l'ordinateur"
         echo "Pas d'arrêt" ;;
 esac
 exit 0

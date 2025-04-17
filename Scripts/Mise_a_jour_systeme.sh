@@ -4,8 +4,8 @@
 echo "voulez-vous mettre à jour le système? (yes/no)"
 
 #Lecture choix de la mise à jour
-read Choix
-case $Choix in
+read choix
+case $choix in
 
     yes)
         echo "Mise à jour du système confirmée"

@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #Vérifier le status du pare-feu
-echo "Vérification status du pare-feu"
+echo "Vérification statut du pare-feu"
 sudo ufw status
 
 #Désactivation du pare-feu
 echo "Voulez-vous désactiver le pare-feu? (yes/no)"
-read Choix
+read choix
 
-case $Choix in 
+case $choix in 
 
 yes)
     echo "Désactivation du pare-feu en cours"
