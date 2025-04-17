@@ -7,7 +7,7 @@
 function creating a local user account()
 {
     #Demande Nom du nouvel utilisateur à créer
-    echo " Quel est le nom du nouvel utilisateur?"
+    echo "Quel est le nom du nouvel utilisateur?"
     read newUser
 
     #Vérifier si l'utilisateur existe déjà
@@ -932,7 +932,6 @@ function_info_user_menu_choice ()
 }
 
 #Fonction du sous Menu des actions Ordinateur
-
 function_action_computer_menu_choice ()
 {
     clear
@@ -994,7 +993,6 @@ function_action_computer_menu_choice ()
 
 
 #Fonction du sous Menu des informations Ordinateur
-
 function_info_computer_menu_choice ()
 {
 	clear
@@ -1137,6 +1135,7 @@ function_script_menu ()
 #-----------------------------------------------------------------------------------------------------------------------------------------
 #								Menu Principal
 #-----------------------------------------------------------------------------------------------------------------------------------------
+#Menu principal
 function main_menu ()
 {
 	clear
