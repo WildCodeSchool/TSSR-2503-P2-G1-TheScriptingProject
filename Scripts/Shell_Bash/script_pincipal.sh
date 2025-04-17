@@ -57,11 +57,11 @@ function main_menu ()
 
 	case $main_choice in
 	1)
-		user_menu ;;
+		 ;;
 	2)
-        computer_menu ;;
+         ;;
 	3)
-		script_menu ;;
+		 ;;
 	*)
         read -p "Choix invalide, appuyer sur la touche [Entrée] pour continuer"
 	    main_menu ;;
