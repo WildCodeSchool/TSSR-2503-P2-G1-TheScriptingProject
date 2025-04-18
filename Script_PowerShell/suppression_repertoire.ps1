@@ -2,4 +2,4 @@
 $nomDossier = Read-Host "Entrez le nom du dossier"
 $chemin = Read-Host "Entrez le chemin complet"
 Remove-Item $nomDossier
-Write-Host "Le dossier et son contenu ont été supprimer" -ForegroundColor Green
+Write-Host "`nLe dossier et son contenu ont été supprimer" -ForegroundColor Green
