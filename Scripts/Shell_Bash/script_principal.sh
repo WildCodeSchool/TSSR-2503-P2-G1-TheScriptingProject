@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ScriptUser=$(whoami)
-Date=$(date +"[%Y%m%d]"-"[%H%M%S]")
+Date=$(date +[%Y%m%d]-[%H%M%S])
 DateSingle=$(date +"[%Y%m%d]")
 LogFile=/var/log/log_evt.log
 LogFolder=./log/
@@ -19,21 +19,19 @@ function Initialisation1 ()
     if [ ! -e $LogFolder ]
     then
         sudo mkdir $LogFolder
-        sudo chown kerrath $LogFolder
     fi
     sleep 1
     echo "Initialisation du fichiers log_evt.log ..."
     if [ ! -e $LogFile ]
     then
         sudo touch $LogFile
-        sudo chown kerrath $LogFile
     fi
     sleep 1
     echo "Vérification ..."
     echo "done"
     sleep 1
     clear
-    echo "===== Bienvenu "$ScriptUser" ====="  
+    echo "===== Bienvenu $ScriptUser ====="  
     echo ""
     echo "1. Client Ubuntu (CLILIN01)"
     echo "2. Client Windows (CLIWIN01) [WIP]"
@@ -59,6 +57,7 @@ function Initialisation1 ()
             echo "Vérification ..."
             sleep 1
             echo "Nettoyage ..."
+            echo ""
             echo "===== Script by : Tatiana, John et Lloyd ====="
             exit 0 ;;        
         *)
@@ -71,7 +70,7 @@ function Initialisation1 ()
 function Initialisation2 ()
 {    
     clear
-    echo "===== Bienvenu "$ScriptUser" ====="  
+    echo "===== Bienvenu $ScriptUser ====="  
     echo ""
     echo "1. Wilder"
     echo "2. Autre"
@@ -135,6 +134,7 @@ function boucle ()
         echo "Vérification ..."
         sleep 1
         echo "Nettoyage ..."
+        echo ""
         echo "===== Script by : Tatiana, John et Lloyd ====="
         exit 0 ;;
     *)
@@ -1427,6 +1427,7 @@ function main_menu ()
         echo "Vérification ..."
         sleep 1
         echo "Nettoyage ..."
+        echo ""
         echo "===== Script by : Tatiana, John et Lloyd ====="
         exit 0 ;;        
 	*)
