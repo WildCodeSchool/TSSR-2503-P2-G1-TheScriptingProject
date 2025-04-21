@@ -5,6 +5,9 @@ Date=$(date +[%Y%m%d]-[%H%M%S])
 DateSingle=$(date +"[%Y%m%d]")
 LogFile=/var/log/log_evt.log
 LogFolder=./log/
+LogPc="[$TargetComputeur]-GEN$DateSingle".txt
+LogUser="[$TargetComputeur]_[$TargetUser]$DateSingle".txt 
+
 
 #----------------------------------------------------------------------------------------------------------------------
 #				Fonctions d'initialisation
