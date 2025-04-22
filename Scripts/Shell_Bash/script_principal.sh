@@ -767,8 +767,8 @@ function remote_control ()
     clear
     echo "===== Prise de main à distance (CLI) ====="
     echo ""
-    echo "Rappel : pour quitter la prise de main à distance, tapper 'exit' dans le terminal"
-    echo "Connexion en cour ..."
+    echo "Rappel : pour quitter la prise de main à distance, taper 'exit' dans le terminal"
+    echo "Connexion en cours ..."
     ssh "$TargetUser"@"$TargetComputeur"
     echo "$Date-[$ScriptUser]-[Prise de main à distance (CLI)]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
