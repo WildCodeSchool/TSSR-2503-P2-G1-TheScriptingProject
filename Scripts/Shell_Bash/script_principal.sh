@@ -1036,8 +1036,8 @@ function local_users_list()
     echo "===== Liste des utilisateur locaux ====="
     echo ""
     echo "Voici la liste des utilisateurs locaux :"
-    ssh "$TargetUser"@"$TargetComputeur" sudo -S cat /etc/passwd | grep "/home"
-    ssh "$TargetUser"@"$TargetComputeur" sudo -S cat /etc/passwd | grep "/home" > $LogFolder$LogPc
+    ssh "$TargetUser"@"$TargetComputeur"  cat /etc/passwd | grep "/home"
+    ssh "$TargetUser"@"$TargetComputeur"  cat /etc/passwd | grep "/home" > $LogFolder$LogPc
     echo "$Date-[$ScriptUser]-[Liste des utilisateur locaux]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
