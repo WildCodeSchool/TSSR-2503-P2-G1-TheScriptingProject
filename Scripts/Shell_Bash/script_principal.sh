@@ -21,13 +21,13 @@ function Initialisation1 ()
     echo "Initialisation du dossier de log ..."
     if [ ! -e $LogFolder ]
     then
-        sudo mkdir $LogFolder
+        mkdir $LogFolder
     fi
     sleep 1
     echo "Initialisation du fichiers log_evt.log ..."
     if [ ! -e $LogFile ]
     then
-        sudo touch $LogFile
+        touch $LogFile
     fi
     sleep 1
     echo "Vérification ..."
@@ -200,7 +200,7 @@ function change_password ()
 
     #Enregistrement du mot de passe
     ssh "$TargetUser"@"$TargetComputeur" sudo -S passwd $user_name
-    echo "$Date-$ScriptUser-[Changement de mot de passe pour $user_name]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Changement de mot de passe pour $user_name]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -226,19 +226,19 @@ function deleting_a_local_user_account ()
         if ssh "$TargetUser"@"$TargetComputeur" cat /etc/passwd | grep $user_name > /dev/null
         then
             echo "ERREUR = utilisateur non supprimé"
-            echo "$Date-$ScriptUser-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         else
             echo "L'utilisateur a bien été supprimer"
-            echo "$Date-$ScriptUser-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi
     else
         echo "L'utilisateur n'existe pas"
         echo "Aucun utilisateur supprimé"
-        echo "$Date-$ScriptUser-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Suppression de compte utilisateur local : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -262,13 +262,13 @@ function local_user_account_deactivation ()
         echo "Désactivation de l'utilisateur"
         ssh "$TargetUser"@"$TargetComputeur" sudo -S usermod -L "$name_user"
         echo "Utilisateur désactivé"
-        echo "$Date-$ScriptUser-[Désactivation de compte utilisateur local : $name_user]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Désactivation de compte utilisateur local : $name_user]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     else
         #Problème de désactivation
         echo "Le nom utilisateur n'existe pas"
-        echo "$Date-$ScriptUser-[Désactivation de compte utilisateur local : $name_user]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Désactivation de compte utilisateur local : $name_user]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -294,18 +294,18 @@ function adding_to_an_administration_group ()
         if ssh "$TargetUser"@"$TargetComputeur" id -nG $user_name | grep adm > /dev/null
         then
             echo "L'utilisateur a bien été ajouté"
-            echo "$Date-$ScriptUser-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         else
             echo "Erreur : L'utilisateur n'a pas été ajouté"
-            echo "$Date-$ScriptUser-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi
     else
         echo "L'utilisateur n'existe pas"
-        echo "$Date-$ScriptUser-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Ajout à un groupe d'administration : $user_name]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -337,18 +337,18 @@ function adding_to_a_local_group ()
             if ssh "$TargetUser"@"$TargetComputeur" id -nG "$user_name" | grep "$name_group" > /dev/null
             then
                 echo "L'utilisateur a bien été ajouté"
-                echo "$Date-$ScriptUser-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+                echo "$Date-[$ScriptUser]-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
                 read -p "Appuyer sur la touche [Entrée] pour continuer"
                 boucle
             else
                 echo "Erreur : l'utilisateur na pas été ajouté"
-                echo "$Date-$ScriptUser-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+                echo "$Date-[$ScriptUser]-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
                 read -p "Appuyer sur la touche [Entrée] pour continuer"
                 boucle
             fi
         else
             echo "Ce groupe n'existe pas"
-            echo "$Date-$ScriptUser-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Ajout à un group local : $user_name dans $name_group ]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi
@@ -385,25 +385,25 @@ function local_band_release ()
             if ssh "$TargetUser"@"$TargetComputeur" id -nG $user_name | grep $name_group > /dev/null
             then
                 echo "Erreur : l'utilisateur n'a pas étét supprimé du groupe"
-                echo "$Date-$ScriptUser-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+                echo "$Date-[$ScriptUser]-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
                 read -p "Appuyer sur la touche [Entrée] pour continuer"
                 boucle
 
             else
                 echo "L'utilisateur a bien été supprimé du groupe"
-                echo "$Date-$ScriptUser-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+                echo "$Date-[$ScriptUser]-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
                 read -p "Appuyer sur la touche [Entrée] pour continuer"
                 boucle
             fi
         else
             echo "L'utilisateur n'est pas dans ce groupe"
-            echo "$Date-$ScriptUser-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi
     else
         echo "L'utilisateur n'existe pas"
-        echo "$Date-$ScriptUser-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Sortie d'un groupe local : $user_name dans $name_group]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -422,7 +422,7 @@ function lastdate_connexion()
     echo "Voici la date de dernière connexion :"
     ssh "$TargetUser"@"$TargetComputeur" last -1 $TargetUser
     ssh "$TargetUser"@"$TargetComputeur" last -1 $TargetUser > $LogFolder$LogUser 
-    echo "$Date-$ScriptUser-[Date de dernière connexion : $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Date de dernière connexion : $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -437,7 +437,7 @@ function lastdate_passwd()
     echo "Voici la dernière date de modification de mot de passe :"
     ssh "$TargetUser"@"$TargetComputeur" passwd -S
     ssh "$TargetUser"@"$TargetComputeur" passwd -S > $LogFolder$LogUser
-    echo "$Date-$ScriptUser-[Date de dernière modification de mot de passe de $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Date de dernière modification de mot de passe de $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -452,7 +452,7 @@ function open_user_session()
     echo "Voici la liste des sessions ouvertes par l'utilisateur :"
     ssh "$TargetUser"@"$TargetComputeur" who -u | grep "$TargetUser"
     ssh "$TargetUser"@"$TargetComputeur" who -u | grep "$TargetUser" > $LogFolder$LogUser
-    echo "$Date-$ScriptUser-[Liste des session ouvertes par l'utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Liste des session ouvertes par l'utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -467,7 +467,7 @@ function user_groups()
     echo "Voici le Groupe d'appartenance de l'utilisateur :"
     ssh "$TargetUser"@"$TargetComputeur" id -Gn $TargetUser
     ssh "$TargetUser"@"$TargetComputeur" id -Gn $TargetUser > $LogFolder$LogUser
-    echo "$Date-$ScriptUser-[Groupe d'appertenance d'un utilisateur : $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Groupe d'appertenance d'un utilisateur : $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -482,7 +482,7 @@ function allcommand_user()
     echo "Voici l'historique des commandes exécutées par l'utilisateur :"
     ssh "$TargetUser"@"$TargetComputeur" cat /home/"$TargetUser"/.bash_history
     ssh "$TargetUser"@"$TargetComputeur" cat /home/"$TargetUser"/.bash_history > $LogFolder$LogUser
-    echo "$Date-$ScriptUser-[Historique des commandes exécutées par l'utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Historique des commandes exécutées par l'utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -502,12 +502,12 @@ function access_folder()
 	    echo "Voici les droits/permissions de l'utilisateur sur ce dossier :"
         ssh "$TargetUser"@"$TargetComputeur" ls -ld $folderPath
         ssh "$TargetUser"@"$TargetComputeur" ls -ld $folderPath > $LogFolder$LogUser
-        echo "$Date-$ScriptUser-[Droits/permissions de l'utilisateur $TargetUser sur un dossier]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Droits/permissions de l'utilisateur $TargetUser sur un dossier]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     else
         read -p "le dossier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
-        echo "$Date-$ScriptUser-[Droits/permissions de l'utilisateur $TargetUser sur un dossier]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Droits/permissions de l'utilisateur $TargetUser sur un dossier]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         boucle
     fi
 }
@@ -527,12 +527,12 @@ function access_file()
         echo "Voici les droits/permissions de l'utilisateur sur ce fichier :"
         ssh "$TargetUser"@"$TargetComputeur" ls -l $filePath
         ssh "$TargetUser"@"$TargetComputeur" ls -l $filePath > $LogFolder$LogUser
-        echo "$Date-$ScriptUser-[Droits/permissions de l'utilisateur $TargetUser sur un fichier]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Droits/permissions de l'utilisateur $TargetUser sur un fichier]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     else
         read -p "le fichier n'existe pas, appuyer sur la touche [Entrée] pour continuer"
-        echo "$Date-$ScriptUser-[Droits/permissions de l'utilisateur $TargetUser sur un fichier]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Droits/permissions de l'utilisateur $TargetUser sur un fichier]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle        
     fi
@@ -557,7 +557,7 @@ function computer_shutdown ()
             ssh "$TargetUser"@"$TargetComputeur" sudo -S shutdown now
             echo "Confirmation arrêt machine"
             echo "Arrêt en cours"
-            echo "$Date-$ScriptUser-[Arrêt ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Arrêt ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle ;;
         no)
@@ -587,7 +587,7 @@ function restart_computer ()
             echo "Confirmation du redémarrage"
             echo "Redémarrage de la machine en cours"
             ssh "$TargetUser"@"$TargetComputeur" sudo -S reboot 
-            echo "$Date-$ScriptUser-[Redémarrage ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Redémarrage ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle ;;
         no)
@@ -617,7 +617,7 @@ function computer_lock ()
             echo "Confirmation du verrouillage"
             echo "Verrouillage en cours"
             ssh "$TargetUser"@"$TargetComputeur" dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock 
-            echo "$Date-$ScriptUser-[Verrouillage ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Verrouillage ordinateur]-[$TargetUser@$TargetComputeur]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle ;;
         no)
@@ -647,7 +647,7 @@ function system_update ()
             echo "Mise à jour du système confirmée"
             echo "Mise à jour du système en cours"
             ssh "$TargetUser"@"$TargetComputeur" sudo -S apt update && ssh "$TargetUser"@"$TargetComputeur" sudo -S apt upgrade -y 
-            echo "$Date-$ScriptUser-[Mise-à-jour du système]-[$TargetUser@$TargetComputeur]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Mise-à-jour du système]-[$TargetUser@$TargetComputeur]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle ;;
         no)
@@ -678,12 +678,12 @@ function directory_creation ()
         if [ $? -eq 0 ]
         then
             echo "Répertoire $folderName créé."
-            echo "$Date-$ScriptUser-[Création de répertoire $folderPath"/"$folderName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Création de répertoire $folderPath"/"$folderName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         else
             echo "Impossible de créé le répertoire $folderName : un répertoire avec le même nom existe déjà."
-            echo "$Date-$ScriptUser-[Création de répertoire $folderPath"/"$folderName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Création de répertoire $folderPath"/"$folderName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi 
@@ -713,19 +713,19 @@ function directory_modification ()
         if [ $? -eq 0 ]
         then
             echo "Erreur = ce répertoire existe déja"
-            echo "$Date-$ScriptUser-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         else
             ssh "$TargetUser"@"$TargetComputeur" mv "$folderPath/$folderName" "$folderPath/$folderNewName"
             echo "Répertoire modifier"
-            echo "$Date-$ScriptUser-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+            echo "$Date-[$ScriptUser]-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
             read -p "Appuyer sur la touche [Entrée] pour continuer"
             boucle
         fi
     else
         echo "Le répertoire indiquer n'existe pas"
-        echo "$Date-$ScriptUser-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Modification de répertoire $folderPath/$folderNewName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -749,12 +749,12 @@ function directory_deletion ()
     then
         ssh "$TargetUser"@"$TargetComputeur" rm -r "$folderPath/$folderName"
         echo "Le répertoire a été supprimer"
-        echo "$Date-$ScriptUser-[Suppression de répertoire $folderPath/$folderName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Suppression de répertoire $folderPath/$folderName]-[$TargetUser@$TargetComputeur]-[Reussi]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     else
         echo "Le répertoire n'existe pas"
-        echo "$Date-$ScriptUser-[Suppression de répertoire $folderPath/$folderName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Suppression de répertoire $folderPath/$folderName]-[$TargetUser@$TargetComputeur]-[Echec]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     fi
@@ -770,7 +770,7 @@ function remote_control ()
     echo "Rappel : pour quitter la prise de main à distance, tapper 'exit' dans le terminal"
     echo "Connexion en cour ..."
     ssh "$TargetUser"@"$TargetComputeur"
-    echo "$Date-$ScriptUser-[Prise de main à distance (CLI)]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Prise de main à distance (CLI)]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -793,7 +793,7 @@ function enabling_the_firewall ()
         echo "Activation du pare-feu en cours"
         ssh "$TargetUser"@"$TargetComputeur" sudo -S ufw enable
         echo "Pare-feu activé"
-        echo "$Date-$ScriptUser-[Activation du Pare-feu]-[$TargetUser@$TargetComputeur]" >> $LogFile 
+        echo "$Date-[$ScriptUser]-[Activation du Pare-feu]-[$TargetUser@$TargetComputeur]" >> $LogFile 
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle ;;
     no)
@@ -824,7 +824,7 @@ function disabling_the_firewall ()
         echo "Désactivation du pare-feu en cours"
         ssh "$TargetUser"@"$TargetComputeur" sudo -S ufw disable
         echo "Pare-feu désactivé"
-        echo "$Date-$ScriptUser-[Désactivation du Pare-feu]-[$TargetUser@$TargetComputeur]" >> $LogFile 
+        echo "$Date-[$ScriptUser]-[Désactivation du Pare-feu]-[$TargetUser@$TargetComputeur]" >> $LogFile 
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle;;
     no)
@@ -847,7 +847,7 @@ function software_installation ()
     #Installation du logiciel
     echo "Installation du logiciel en cours"
     ssh "$TargetUser"@"$TargetComputeur" sudo -S apt install $app
-    echo "$Date-$ScriptUser-[Installation de logiciel $app]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Installation de logiciel $app]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -865,7 +865,7 @@ function software_uninstallation ()
     #Lancer la désinstallation
     echo "Désinstallation du logiciel"
     ssh "$TargetUser"@"$TargetComputeur" sudo -S apt purge $app
-    echo "$Date-$ScriptUser-[Désinstallation de logiciel $app]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Désinstallation de logiciel $app]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -885,7 +885,7 @@ function script_execution_on_remote_machine ()
     if [ $? -eq 0 ]
     then   
         ssh "$TargetUser"@"$TargetComputeur" bash $path_script/$name_script
-        echo "$Date-$ScriptUser-[Exécution de script sur la machine distante $path_script/$name_script ]-[$TargetUser@$TargetComputeur]" >> $LogFile
+        echo "$Date-[$ScriptUser]-[Exécution de script sur la machine distante $path_script/$name_script ]-[$TargetUser@$TargetComputeur]" >> $LogFile
         read -p "Appuyer sur la touche [Entrée] pour continuer"
         boucle
     else
@@ -909,7 +909,7 @@ function os_version()
 	echo "Voici la version de l'OS :"
 	ssh "$TargetUser"@"$TargetComputeur" lsb_release -a
     ssh "$TargetUser"@"$TargetComputeur" lsb_release -a > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Version de l'OS]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Version de l'OS]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -924,7 +924,7 @@ function disk_number()
     echo "Voici le nombre de disque :"
     ssh "$TargetUser"@"$TargetComputeur" lsblk -n | grep -v "loop*" | grep -v "part" | wc -l
     ssh "$TargetUser"@"$TargetComputeur" lsblk -n | grep -v "loop*" | grep -v "part" | wc -l > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Nombre de disque]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Nombre de disque]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -939,7 +939,7 @@ function partition_info()
     echo "Voici le détail des partitions :"
     ssh "$TargetUser"@"$TargetComputeur" lsblk -o NAME,SIZE,TYPE,FSTYPE,FSUSE%,MOUNTPOINTS | grep -v "loop*"
     ssh "$TargetUser"@"$TargetComputeur" lsblk -o NAME,SIZE,TYPE,FSTYPE,FSUSE%,MOUNTPOINTS | grep -v "loop*" > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Partition par disque]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Partition par disque]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -954,7 +954,7 @@ function free_space()
     echo "Voici l'espace disque restant :"
     ssh "$TargetUser"@"$TargetComputeur" df -h | grep -v "tmpfs"
     ssh "$TargetUser"@"$TargetComputeur" df -h | grep -v "tmpfs" > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Espace disque restant par partition/volume]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Espace disque restant par partition/volume]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -974,7 +974,7 @@ function info_folder()
 	    echo "Voici le nom et l'espace disque du dossier :"
 	    ssh "$TargetUser"@"$TargetComputeur" du -sh "$folderPath/$folderName"
         ssh "$TargetUser"@"$TargetComputeur" du -sh "$folderPath/$folderName" > $LogFolder$LogPc
-        echo "$Date-$ScriptUser-[Nom et espace disque d'un dossier $folderPath/$folderName]-[$TargetUser@$TargetComputeur]" >> $LogFile    
+        echo "$Date-[$ScriptUser]-[Nom et espace disque d'un dossier $folderPath/$folderName]-[$TargetUser@$TargetComputeur]" >> $LogFile    
         read -p "Appuyer sur la touche [Entrée] pour continuer"
     else
         read -p "le dossier indiquer n'existe pas"
@@ -993,7 +993,7 @@ function mounted_drive_list()
     echo "Voici la liste des lecteurs montés :"
     ssh "$TargetUser"@"$TargetComputeur" findmnt
     ssh "$TargetUser"@"$TargetComputeur" findmnt > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Liste des lecteurs monté]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Liste des lecteurs monté]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1008,7 +1008,7 @@ function pack_app_installed()
     echo "Voici la liste des applications/paquets installées :"
     ssh "$TargetUser"@"$TargetComputeur" apt --installed list
     ssh "$TargetUser"@"$TargetComputeur" apt --installed list > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Liste des application/paquets installées]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Liste des application/paquets installées]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1023,7 +1023,7 @@ function serv_progress()
     echo "Voici la liste des services en cours d'exécution :"
     ssh "$TargetUser"@"$TargetComputeur" systemctl list-units --type=service
     ssh "$TargetUser"@"$TargetComputeur" systemctl list-units --type=service > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Liste des services en cours d'execution]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Liste des services en cours d'execution]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1038,7 +1038,7 @@ function local_users_list()
     echo "Voici la liste des utilisateurs locaux :"
     ssh "$TargetUser"@"$TargetComputeur" sudo -S cat /etc/passwd | grep "/home"
     ssh "$TargetUser"@"$TargetComputeur" sudo -S cat /etc/passwd | grep "/home" > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Liste des utilisateur locaux]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Liste des utilisateur locaux]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1053,7 +1053,7 @@ function total_ram()
     echo "Voici la mémoire RAM total :"
     ssh "$TargetUser"@"$TargetComputeur" lshw -c memory | grep taille
     ssh "$TargetUser"@"$TargetComputeur" lshw -c memory | grep taille > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Mémoire RAM totale]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Mémoire RAM totale]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1068,7 +1068,7 @@ function ram_used()
     echo "Voici la mémoire RAM total :"
     ssh "$TargetUser"@"$TargetComputeur" free -h
     ssh "$TargetUser"@"$TargetComputeur" free -h > $LogFolder$LogPc
-    echo "$Date-$ScriptUser-[Utilisation de la RAM]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Utilisation de la RAM]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1087,7 +1087,7 @@ function user_event ()
     echo ""
 	echo "Voici les évènements de l'utilisateur $TargetUser : "
 	cat $LogFile | grep "$TargetUser"
-    echo "$Date-$ScriptUser-[Recherche des évènements pour un utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Recherche des évènements pour un utilisateur $TargetUser]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
@@ -1099,7 +1099,7 @@ function computer_event ()
     echo ""
 	echo "Voici les évènements de l'utilisateur $TargetComputeur : "
 	cat $LogFile | grep "$TargetComputeur"
-    echo "$Date-$ScriptUser-[Recherche des évènements pour un ordinateur $TargetComputeur]-[$TargetUser@$TargetComputeur]" >> $LogFile
+    echo "$Date-[$ScriptUser]-[Recherche des évènements pour un ordinateur $TargetComputeur]-[$TargetUser@$TargetComputeur]" >> $LogFile
     read -p "Appuyer sur la touche [Entrée] pour continuer"
     boucle
 }
