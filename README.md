@@ -64,9 +64,9 @@
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|  | Scrum Master  |  |
-|  | Technicien    |  |
-|    | Product Owner |  |
+|   John         | Scrum Master  |  |
+|   Tatiana      | Technicien    |  |
+|   Lloyd        | Product Owner |  |
 
 ## ⚙️ Choix techniques
 <span id="choix-techniques"></span>
