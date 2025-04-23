@@ -40,33 +40,33 @@
 
 | Membre         | Rôle          | Missions                                                                   |
 | -------------- | ------------- | -------------------------------------------------------------------------- |
-|   Tatiana     | Product Owner | |
-|   Lloyd       | Scrum Master  |  |
-|   John        | Technicien    | |
+|   Tatiana      | Product Owner |  Réflexion sur le projet et comment l'aborder, sur un squelette de script et début d'écriture script bash |
+|   Lloyd        | Scrum Master  |  Réflexion sur le projet et comment l'aborder, sur un squelette de script et la connexion entre les machines |
+|   John         | Technicien    |  Réflexion sur le projet et comment l'aborder, début d'écriture du squelette ainsi que les scripts bash |
 
 ### Sprint 2
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|   John         | Scrum Master  |  |
-|   Tatiana      | Technicien    |  |
-|   Lloyd        | Product Owner |  |
+|   John         | Scrum Master  | Attribuer les adresses IP aux machines ainsi que les noms.., écriture des scripts bash  |
+|   Tatiana      | Technicien    | Attribuer les adresses IP aux machines ainsi que les noms.., écriture des scripts bash  |
+|   Lloyd        | Product Owner | Attribuer les adresses IP aux machines ainsi que les noms.., début écriture scripts powershell |
 
 ### Sprint 3
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|   Tatiana      | Scrum Master  |  |
-|   Lloyd        | Technicien    |  |
-|   John         | Product Owner |  |
+|   Tatiana      | Scrum Master  |  Fin d'écriture des scripts bash, début des scripts powershell et mise en place des scripts bash dans le squelette |
+|   Lloyd        | Technicien    |  Fin d'écriture des scripts bash, début des scripts powershell et mise en place des scripts bash dans le squelette |
+|   John         | Product Owner |  Ecriture scripts powershell, Importation de la clé SSH et fin de la mise en forme du squelette |
 
 ### Sprint 4
 
 | Membre         | Rôle          | Missions                                                                        |
 | -------------- | ------------- | ------------------------------------------------------------------------------- |
-|   John         | Scrum Master  |  |
-|   Tatiana      | Technicien    |  |
-|   Lloyd        | Product Owner |  |
+|   John         | Scrum Master  | Ecriture du squeltte powershell, scripts powershell |
+|   Tatiana      | Technicien    | Ecriture des scripts powershell et de la documentation |
+|   Lloyd        | Product Owner | Importation des scripts au squelette, modifications, test  |
 
 ## ⚙️ Choix techniques
 <span id="choix-techniques"></span>
