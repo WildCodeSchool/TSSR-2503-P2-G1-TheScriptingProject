@@ -108,10 +108,41 @@
 ##### Etape 1:  
 -------------------  
 - Vous pouvez choisir **une action** ou **une information** ou **revenir au menu précédent**    
+  
+![menu_ordinateur](https://github.com/user-attachments/assets/58279051-9b69-4544-97c5-abde7c664709)  
 
-![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1)  
+##### Etape 2:  
+-------------------  
+- En choisissant **une action**, vous avez plusieurs choix possibles  
+  Vous pouvez :  
+  - Arrêter l'ordinateur de l'utilisateur  
+  - Redémarrer l'ordinateur de l'utilisateur  
+  - Verrouiller l'ordinateur de l'utilisateur  
+  - Faire une mise à jour du système  
+  - Créer un répertoire  
+  - Modifier un répertoire  
+  - Supprimer un répertoire  
+  - Prendre la main à distance de l'ordinateur de l'utilisateur (en ligne de commande)
+  -  Activer le pare-feu
+  -  Désactiver le pare-feu
+  -  Installer un logiciel
+  -  Désinstaller un logiciel
+  -  Exécuter un script sur l'ordinateur de l'utilisateur
+  -  Revenir au menu précédent
+      
+![menu_des_actions_ordinateur](https://github.com/user-attachments/assets/4f1dad3b-29dc-4a1e-a808-e4139c8e35c4)  
 
 
+### D.Menu Script  
+<span id="menu_script"></span>  
+
+##### Etape 1:  
+-------------------  
+- Vous pouvez choisir de **rechercher un évènement** dans le fichier _log_ pour un **utilisateur** ou un **ordinateur** ou **revenir au menu précédent**    
+  
+![menu_script](https://github.com/user-attachments/assets/302605b6-add8-4577-9637-310d4453a875)  
+  
+  
 
 
 
