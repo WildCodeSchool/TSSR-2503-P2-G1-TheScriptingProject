@@ -215,7 +215,8 @@
 -------------------  
 - Vous pouvez choisir **une action** , **une information** ou **revenir au menu précédent**    
 
-![menu_utilisateur](https://github.com/user-attachments/assets/3e480813-9dfb-4222-8f6a-08cf65d28052)  
+![menu_utilisateur](https://github.com/user-attachments/assets/23ad3fe3-2f98-429a-af53-35b24df42909)
+  
 
   
 
