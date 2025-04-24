@@ -73,18 +73,20 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 |   Tatiana      | Technicien    | Ecriture des scripts powershell et de la documentation |
 |   Lloyd        | Product Owner | Importation des scripts au squelette, modifications, test  |
 
-## ⚙️ Choix techniques
+## ⚙️ Prérequis
 <span id="choix-techniques"></span>
 
+- Compte Promox
+- Machines Virtuelles (Nous avons mis en place 4machines virtuelles sur proxmox)
+  > Ubuntu (Client)
+  > Debian (Serveur)
+  > Windows (Client)
+  > Windows (Serveur)
 
+- Configuration des machines pour que celles-ci soient accessibles à distance
 
-### Machines
-
-#### Configuration de machine virtuelle serveur
-
-#### Configuration de machine virtuelle client 2
-
-### Logiciel
+## 🧗 Difficultés rencontrées et 💡 Solutions trouvées
+<span id="Difficultés_rencontrées_et_solutions_trouvées"></span>
 
 
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
