@@ -1,18 +1,22 @@
 ### Sommaire
 
 1. [Serveur_Ubuntu](#ubuntu-serveur)  
-    A. [Connexion au compte](#connexion_compte)  
-    B. [Menu Utilisateur](#menu_utilisateur)  
-    C. [Menu Ordinateur](#menu_ordinateur)  
-    D. [Menu Script](#menu_script)  
-2. [Serveur_Windows](#windows-serveur)  
+    A. [Connexion au compte](#connexion-compte-ubu)  
+    B. [Menu Utilisateur](#menu-utilisateur-ubu)  
+    C. [Menu Ordinateur](#menu-ordinateur-ubu)  
+    D. [Menu Script](#menu-script-ubu)  
+2. [Serveur_Windows](#windows-serveur)
+    A. [Connexion au compte](#connexion-compte-win)  
+    B. [Menu Utilisateur](#menu-utilisateur-win)  
+    C. [Menu Ordinateur](#menu-ordinateur-win)  
+    D. [Menu Script](#menu-script-win)  
 3. [FAQ](#faq)  
 
 # 1. Serveur Ubuntu  
 <span id="ubuntu-serveur"></span>  
 
 ### A.Connexion au compte  
-<span id="connexion_compte"></span>  
+<span id="connexion-compte-ubu"></span>  
 
 ##### Etape 1:  
 -------------------  
@@ -64,7 +68,7 @@
 
 
 ### B.Menu Utilisateur  
-<span id="menu_utilisateur"></span>  
+<span id="menu-utilisateur-ubu"></span>  
 
 ##### Etape 1:  
 -------------------  
@@ -103,7 +107,7 @@
 
 
 ### C.Menu Ordinateur  
-<span id="menu_ordinateur"></span>  
+<span id="menu-ordinateur-ubu"></span>  
 
 ##### Etape 1:  
 -------------------  
