@@ -11,10 +11,10 @@
 # 1. Guide utilisateur  
 <span id="utilisation-client"></span>  
 
-**A.Connexion au compte**  
+### A.Connexion au compte  
 <span id="connexion_compte"></span>  
 
-### **Etape 1**:  
+##### **Etape 1**:  
 -------------------  
 - Se connecter avec le compte utilisateur **wilder** et entrer le mot de passe _Azerty1*_  
 
