@@ -84,7 +84,22 @@
   - Ajouter un utilisateur à un groupe local  
   - Retirer un utilisateur à un groupe local  
   - Revenir au menu précédent  
-![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)
+![menu_des_actions_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)
+
+
+- En choisissant **une information**, vous avez plusieurs choix possibles  
+  Vous pouvez :  
+  - Connaître la date de dernière connexion de l' utilisateur    
+  - Connaître la date de dernière modification de mot de passe de l' utilisateur     
+  - Voir la liste des sessions ouvertes par l'utilisateur    
+  - Voir le groupe auquel un utilisateur appartient    
+  - Voir l'historique des commandes utilisées par l'utilisateur  
+  - Voir quels sont les droits et permissions de l'utilisateur pour un dossier en particulier    
+  - Voir quels sont les droits et permissions de l'utilisateur pour un fichier en particulier    
+  - Revenir au menu précédent  
+  
+![menu_des_informations_utilisateur](https://github.com/user-attachments/assets/1defc4d8-77a0-4f72-a50e-3d639582bf19)  
+
 
 
 ### C.Menu Ordinateur  
