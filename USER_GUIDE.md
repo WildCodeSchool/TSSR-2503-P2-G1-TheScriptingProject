@@ -173,7 +173,7 @@
 <span id="windows-serveur"></span>  
 
 NB : Le script Windows est incomplet, pour les fonctions inutilisables vous verrez la balise "[WIP]" qui signifie "Work In Progress".  
-Toute notre équipe s'excuse pour la gêne occasionnée  
+Toute notre équipe s'excuse pour la gêne occasionnée.  
   
 ### A.Connexion au compte  
 <span id="connexion-compte-win"></span>  
@@ -317,7 +317,5 @@ Toute notre équipe s'excuse pour la gêne occasionnée
   
   
   
-
-
 # 3. FAQ
 <span id="faq"></span>
