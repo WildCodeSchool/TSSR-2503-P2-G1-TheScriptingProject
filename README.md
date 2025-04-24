@@ -89,11 +89,11 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
 | --------------------------------------- | --------------------------------------- |
-| Ecriture des scripts bash et powershell|| Documentation, cours                    |
+| Ecriture des scripts bash et powershell | Documentation, cours                    |
 | Mise en place de la clef SSH            | Documentation, entraide et recherche    |
-|                                         | |
-|                                         | |
-|                                         | |
+|                                         |                                         |
+|                                         |                                         |
+|                                         |                                         |
 
 ## 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
