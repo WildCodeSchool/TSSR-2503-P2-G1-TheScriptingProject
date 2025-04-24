@@ -20,10 +20,15 @@
 
 ### Présentation
 
+Notre projet consiste à créer deux scripts: L'un en bash, l'autre en powershell.
+Ces scripts doivent intérargir avec des machines distantes, que nous avons créés et mises en service sur un même réseau, afin d'éxécuter des commandes d'administration et recueillir des informations.
 
 
 ### Objectifs finaux
 
+- Mettre en place une architecture client/serveur
+- Créer et gérer des scripts bash et PowerShell
+- Développer des compétences en résolution de problèmes et en gestion de versions (Git)
 
 
 ## 📜 Introduction
