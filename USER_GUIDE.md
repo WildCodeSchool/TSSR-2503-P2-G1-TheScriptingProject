@@ -279,17 +279,39 @@
   -  Revenir au menu précédent
       
 ![menu_des_actions_ordinateur](https://github.com/user-attachments/assets/1a3b63f5-c255-4667-9068-2c147d33bb42)  
+
+
+##### Etape 3: 
+-------------------  
+- En choisissant **une information**, vous avez plusieurs choix possibles  
+  Vous pouvez :  
+  - Voir la version de l'OS  
+  - Voir le nombre de disque  
+  - Voir les détails des partitions par disque  
+  - Voir l'espace disque restant par partition/volume  
+  - Voir le nom et l'espace disque d'un dossier  
+  - Voir la liste des lecteurs montés  
+  - Voir la liste des applications et des paquets installées  
+  - Voir la liste des services en cours d'exécution  
+  - Voir la liste des utiilisateurs locaux  
+  - Voir la mémoire RAM totale  
+  - Voir l'utilisation de la RAM  
+  - Revenir au menu précédent  
+
+![menu_des_informations_ordinateurs](https://github.com/user-attachments/assets/565ae4cb-e0cd-4c9a-9cd9-cf4395c1b1fe)  
+
   
 
 
 ### D.Menu Script  
-<span id="menu_script"></span>  
+<span id="menu_script-win"></span>  
 
 ##### Etape 1:  
 -------------------  
 - Vous pouvez choisir de **rechercher un évènement** dans le fichier _log_ pour un **utilisateur** ou un **ordinateur** ou **revenir au menu précédent**    
   
-![menu_script](https://github.com/user-attachments/assets/302605b6-add8-4577-9637-310d4453a875)  
+![menu_script](https://github.com/user-attachments/assets/7bcd3768-5516-469b-a1d5-76d62d9539df)
+  
   
   
 
