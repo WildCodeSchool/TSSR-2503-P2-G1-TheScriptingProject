@@ -68,7 +68,7 @@
 
 ##### Etape 1:  
 -------------------  
-- Vous pouvez choisir **une action** ou **une information** ou **revenir au menu précédent**    
+- Vous pouvez choisir **une action** , **une information** ou **revenir au menu précédent**    
 
 ![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1)  
 
@@ -107,7 +107,7 @@
 
 ##### Etape 1:  
 -------------------  
-- Vous pouvez choisir **une action** ou **une information** ou **revenir au menu précédent**    
+- Vous pouvez choisir **une action** , **une information** ou **revenir au menu précédent**    
   
 ![menu_ordinateur](https://github.com/user-attachments/assets/58279051-9b69-4544-97c5-abde7c664709)  
 
