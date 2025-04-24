@@ -8,9 +8,8 @@
 - [🎯 Présentation générale du projet](#presentation-du-projet)
 - [📜 Introduction](#introduction)
 - [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
-- [⚙️ Choix Techniques](#choix-techniques)
-- [🧗Difficultés rencontrées](#difficultes-rencontrees)
-- [💡 Solutions trouvées](#solutions-trouvees)
+- [⚙️ Prérequis](#Prérequis)
+- [🧗Difficultés rencontrées💡Solutions trouvées](#Difficultés-rencontrées-et-solutions-trouvées)
 - [🚀 Améliorations possibles](#ameliorations-possibles)
 
 ---
@@ -75,7 +74,7 @@ Ici, nous allons vous montrer qu'il est possible d'écrire un script (tout petit
 |   Lloyd        | Product Owner | Importation des scripts au squelette, modifications, test  |
 
 ## ⚙️ Prérequis
-<span id="choix-techniques"></span>
+<span id="Prérequis"></span>
 
 - Compte Promox
 - Machines Virtuelles (Nous avons mis en place 4machines virtuelles sur proxmox)
@@ -87,7 +86,7 @@ Ici, nous allons vous montrer qu'il est possible d'écrire un script (tout petit
 - Configuration des machines pour que celles-ci soient accessibles à distance
 
 ## 🧗 Difficultés rencontrées et 💡 Solutions trouvées
-<span id="Difficultés_rencontrées_et_solutions_trouvées"></span>
+<span id="Difficultés-rencontrées-et-solutions-trouvées"></span>
 
 
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
