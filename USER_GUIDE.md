@@ -172,6 +172,9 @@
 # 2. Serveur Windows  
 <span id="windows-serveur"></span>  
 
+NB : Le script Windows est incomplet, pour les fonctions inutilisables vous verrez la balise "[WIP]" qui signifie "Work In Progress".  
+Toute notre équipe s'excuse pour la gêne occasionnée  
+  
 ### A.Connexion au compte  
 <span id="connexion-compte-win"></span>  
 
@@ -225,12 +228,12 @@
 - En choisissant **une action**, vous avez plusieurs choix possibles  
   Vous pouvez :  
   - Créer un nouveau compte utilisateur local  
-  - Changer le mot de passe d'un utilisateur local  
+  - Changer le mot de passe d'un utilisateur local [WIP]     
   - Supprimer un compte utilisateur local  
-  - Désactiver un compte utilisateur local  
-  - Ajouter un utilisateur à un groupe administrateur  
-  - Ajouter un utilisateur à un groupe local  
-  - Retirer un utilisateur à un groupe local  
+  - Désactiver un compte utilisateur local [WIP]    
+  - Ajouter un utilisateur à un groupe administrateur [WIP]     
+  - Ajouter un utilisateur à un groupe local [WIP]     
+  - Retirer un utilisateur à un groupe local [WIP]     
   - Revenir au menu précédent  
 ![menu_des_actions_utilisateur](https://github.com/user-attachments/assets/7ff6f506-115a-4f9b-b0bd-3ca0b5091f9b)  
   
@@ -239,11 +242,11 @@
   Vous pouvez :  
   - Connaître la date de dernière connexion de l' utilisateur    
   - Connaître la date de dernière modification de mot de passe de l' utilisateur     
-  - Voir la liste des sessions ouvertes par l'utilisateur    
-  - Voir le groupe auquel un utilisateur appartient    
+  - Voir la liste des sessions ouvertes par l'utilisateur [WIP]      
+  - Voir le groupe auquel un utilisateur appartient [WIP]      
   - Voir l'historique des commandes utilisées par l'utilisateur  
-  - Voir quels sont les droits et permissions de l'utilisateur pour un dossier en particulier    
-  - Voir quels sont les droits et permissions de l'utilisateur pour un fichier en particulier    
+  - Voir quels sont les droits et permissions de l'utilisateur pour un dossier en particulier [WIP]       
+  - Voir quels sont les droits et permissions de l'utilisateur pour un fichier en particulier [WIP]       
   - Revenir au menu précédent  
   
 ![menu_des_informations_utilisateur](https://github.com/user-attachments/assets/90293e88-dfb8-4571-8a4d-8d7f5450b976)
@@ -270,12 +273,12 @@
   - Créer un répertoire  
   - Modifier un répertoire  
   - Supprimer un répertoire  
-  - Prendre la main à distance de l'ordinateur de l'utilisateur (en ligne de commande)
+  - Prendre la main à distance de l'ordinateur de l'utilisateur (en ligne de commande) [WIP]   
   -  Activer le pare-feu
   -  Désactiver le pare-feu
-  -  Installer un logiciel
-  -  Désinstaller un logiciel
-  -  Exécuter un script sur l'ordinateur de l'utilisateur
+  -  Installer un logiciel [WIP]   
+  -  Désinstaller un logiciel [WIP]   
+  -  Exécuter un script sur l'ordinateur de l'utilisateur [WIP]   
   -  Revenir au menu précédent
       
 ![menu_des_actions_ordinateur](https://github.com/user-attachments/assets/1a3b63f5-c255-4667-9068-2c147d33bb42)  
@@ -287,15 +290,15 @@
   Vous pouvez :  
   - Voir la version de l'OS  
   - Voir le nombre de disque  
-  - Voir les détails des partitions par disque  
-  - Voir l'espace disque restant par partition/volume  
-  - Voir le nom et l'espace disque d'un dossier  
+  - Voir les détails des partitions par disque [WIP]    
+  - Voir l'espace disque restant par partition/volume [WIP]     
+  - Voir le nom et l'espace disque d'un dossier [WIP]     
   - Voir la liste des lecteurs montés  
-  - Voir la liste des applications et des paquets installées  
+  - Voir la liste des applications et des paquets installées [WIP]     
   - Voir la liste des services en cours d'exécution  
   - Voir la liste des utiilisateurs locaux  
-  - Voir la mémoire RAM totale  
-  - Voir l'utilisation de la RAM  
+  - Voir la mémoire RAM totale [WIP]     
+  - Voir l'utilisation de la RAM [WIP]     
   - Revenir au menu précédent  
 
 ![menu_des_informations_ordinateurs](https://github.com/user-attachments/assets/565ae4cb-e0cd-4c9a-9cd9-cf4395c1b1fe)  
