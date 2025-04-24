@@ -76,7 +76,8 @@
 -------------------  
 - En choisissant **une action**, vous avez plusieurs choix possibles   
 
-![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1) 
+![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)
+
    
 
 
