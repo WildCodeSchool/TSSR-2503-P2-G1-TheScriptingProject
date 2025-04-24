@@ -84,6 +84,7 @@ Ici, nous allons vous montrer qu'il est possible d'écrire un script (il y a dde
   > Windows (Serveur)
 
 - Configuration des machines pour que celles-ci soient accessibles à distance
+- Connaissances en scripting bash et powershell
 
 ## 🧗 Difficultés rencontrées et 💡 Solutions trouvées
 <span id="Difficultés-rencontrées-et-solutions-trouvées"></span>
