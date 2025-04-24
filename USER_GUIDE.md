@@ -32,7 +32,7 @@
 ### **Etape 4**:  
 -------------------  
 - Vous arrivez sur le Menu de Bienvenue:  
-  > Prendre le choix 1 **Client Ubunut (CLILIN01)**  
+  > Prendre le choix 1 **Client Ubuntu (CLILIN01)**  
 
 ![menu_de_bienvenue](https://github.com/user-attachments/assets/d039a669-cc77-4e53-b212-0b89136546eb)  
 
