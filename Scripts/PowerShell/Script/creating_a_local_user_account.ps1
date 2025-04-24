@@ -8,10 +8,12 @@ if (Get-LocalUser -Name $user_name -ErrorAction SilentlyContinue)
 {
     #L'utilisateur existe
     Write-Host "L'utilisateur existe déjà" -ForegroundColor Red
+    Read-Host "Appuyez sur [Entrée] pour continuer"
 }
 else
 {
     #Création de l'utilisateur
     New-LocalUser -Name $user_name
     Write-Host "`nL'utilisateur a bien été créé" -ForegroundColor Green
+    Read-Host "Appuyez sur [Entrée] pour continuer"
 }

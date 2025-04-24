@@ -6,3 +6,4 @@ Get-PSDrive
 #Compter les disques
 Write-Host "`nVoici le nombre de disques" -ForegroundColor DarkCyan
 (Get-PSDrive).count 
+Read-Host "Appuyez sur [Entrée] pour continuer"

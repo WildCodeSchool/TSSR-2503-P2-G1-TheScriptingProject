@@ -43,11 +43,11 @@ function initialisation1
 function initialisation2 
 {    
     Clear-Host
-    Write-Host "===== Bienvenue $ScriptUser ====="  
+    Write-Host "===== Bienvenue ====="  
     Write-Host ""
     Write-Host "Merci d'Indiquer les information de connexion de l'utilisateur cible : "
     $Cred=$(Get-Credential)
-    Read-Host - -Prompt "Merci d'indiquer le chemin complet ou ce trouve le dossier 'Script' :" -OutVariable ScriptPath
+    Read-Host -Prompt "Merci d'indiquer le chemin complet ou ce trouve le dossier 'Script' " -OutVariable ScriptPath
     Clear-Host
     Write-Host "Initialisation des Credential..."
     Start-Sleep -Seconds 1
@@ -706,9 +706,11 @@ function action_user_menu_choice
     $choice = Read-Host "Que voulez-vous faire ?"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\creating_a_local_user_account.ps1 }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\creating_a_local_user_account.ps1 
+            boucle}
         2 { change_password }
-        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\deleting_a_local_user_account.ps1 }
+        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\deleting_a_local_user_account.ps1 
+            boucle}
         4 { local_user_account_deactivation }
         5 { adding_to_an_administration_group }
         6 { adding_to_a_local_group }
@@ -742,11 +744,11 @@ function info_user_menu_choice
     $choice = Read-Host "Choisissez une information"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {last_date_connexion} }
-        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {last_date_password} }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_connexion.ps1 }
+        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_password.ps1 }
         3 { open_user_session }
         4 { user_groups }
-        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {all_command_user} }
+        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\all_command_user.ps1 }
         6 { access_folder }
         7 { access_file }
         8 { user_menu }
@@ -786,14 +788,14 @@ function action_computer_menu_choice
     switch ($choice) {
         1 { computer_shutdown }
         2 { restart_computer }
-        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {computer_lock} }
-        4 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {system_update} }
-        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {directory_creation} }
-        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {directory_modification} }
-        7 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {directory_deletion} }
+        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\computer_lock.ps1 }
+        4 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\system_update.ps1 }
+        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_creation.ps1 }
+        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_modification.ps1 }
+        7 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_deletion.ps1 }
         8 { remote_control }
-        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {enable_firewall} }
-        10 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {disable_firewall} }
+        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\enable_firewall.ps1 }
+        10 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disable_firewall.ps1 }
         11 { software_installation }
         12 { software_uninstallation }
         13 { script_execution_on_remote_machine }
@@ -830,8 +832,10 @@ function info_computer_menu_choice
     $choice = Read-Host "Que voulez-vous faire ?"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\os_version.ps1 }
-        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disk_number.ps1 }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\os_version.ps1 
+            boucle}
+        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disk_number.ps1 
+            boucle}
         3 { partition_info }
         4 { free_space }
         5 { info_folder }

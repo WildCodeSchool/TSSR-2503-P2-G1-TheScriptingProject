@@ -9,9 +9,11 @@ if (Get-LocalUser -Name $user_name -ErrorAction SilentlyContinue)
 #Suppression de l'utilisateur
     Remove-LocalUser -Name $user_name
     Write-Host "`nL'utilisateur a bien été supprimé" -ForegroundColor Green
+    Read-Host "Appuyez sur [Entrée] pour continuer"
 }
 else
 {
     #L'utilisateur n'existe pas
     Write-Host "L'utilisateur n'existe pas" -ForegroundColor Red
+    Read-Host "Appuyez sur [Entrée] pour continuer"
 }

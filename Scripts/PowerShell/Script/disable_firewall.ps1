@@ -19,12 +19,15 @@ $choix = Read-Host "reponse"
             "oui" { 
             Write-Host "Désactivation du pare-feu" -ForegroundColor Green
             Set-NetFirewallProfile -Enabled False
+            Read-Host "Appuyez sur [Entrée] pour continuer"
         }   
             "non" {
             Write-Host "Aucun pare-feu de désactivé" -ForegroundColor Yellow
+            Read-Host "Appuyez sur [Entrée] pour continuer"
         }
             default {
             Write-Host "Erreur: Répondre par oui ou non" -ForegroundColor Red
+            Read-Host "Appuyez sur [Entrée] pour continuer"
         }
     }
 }
@@ -32,5 +35,5 @@ else
 {
     #Désactivation déjà en place
     Write-Host "Le pare-feu est déjà désactivé"
-    sortie 0
+    Read-Host "Appuyez sur [Entrée] pour continuer"
 }

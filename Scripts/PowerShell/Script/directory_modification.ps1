@@ -6,3 +6,4 @@ $chemin = Read-Host "Entrez le chemin complet"
 Rename-Item $nomDossier
 #Validation du nouveau nom de dossier
 Write-Host "`nLe dossier a bien été renommé" -ForegroundColor Yellow
+Read-Host "Appuyez sur [Entrée] pour continuer"

@@ -7,3 +7,4 @@ Write-Host "Création du dossier en cours"
 New-Item -ItemType Directory -Name $nomDossier -Path $chemin
 #Validation de la création
 Write-Host "`nRépertoire créé" -ForegroundColor Green
+Read-Host "Appuyez sur [Entrée] pour continuer"
