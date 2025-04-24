@@ -48,9 +48,12 @@
 ### **Etape 6**:  
 -------------------  
 - Vous arrivez sur le Menu Principal:  
-  > Prendre le choix 1 **Wilder**  
+  > Ici vous pouvez choisir entre 3 grands menus que nous allons détailler par la suite :  
+    Le **Menu Utilisateur** (pour avoir des informations ou effectuer des actions sur un utilisateur)  
+    Le **Menu Ordinateur** (pour avoir des informations ou effectuer des actions sur un ordinateur)  
 
-![menu_principal](https://github.com/user-attachments/assets/0bd84707-3fc9-49d2-b4e1-610863a38283)
+![menu_principal](https://github.com/user-attachments/assets/0bd84707-3fc9-49d2-b4e1-610863a38283)  
+
 
 
 
