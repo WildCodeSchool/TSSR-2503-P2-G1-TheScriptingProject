@@ -68,9 +68,16 @@
 
 ##### Etape 1:  
 -------------------  
-- Vous pouvez choisir une **une action** ou **une information** ou **-revenir au menu précédent**    
+- Vous pouvez choisir une **une action** ou **une information** ou **revenir au menu précédent**    
 
-![connexion](https://github.com/user-attachments/assets/844385e6-d8bf-4d49-886d-404fe56e506d)    
+![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1)  
+
+##### Etape 2:  
+-------------------  
+- En choisissant **une action**, vous avez plusieurs choix possibles   
+
+![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1) 
+   
 
 
 
