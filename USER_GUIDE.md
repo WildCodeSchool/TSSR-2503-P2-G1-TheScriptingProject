@@ -1,4 +1,4 @@
-## Sommaire
+### Sommaire
 
 1. [Guide utilisateur](#utilisation-client)  
     A. [Connexion au compte](#connexion_compte)  
