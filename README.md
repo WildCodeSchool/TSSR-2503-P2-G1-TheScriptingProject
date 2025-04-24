@@ -35,7 +35,7 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 <span id="introduction"></span>
 
 Vous souhaitez avoir accès à une grande partie d'un ordinateur à distance sans avoir à parcourir l'intégralité de celui-ci alors vous êtes au bon endroit !
-Ici, nous allons vous montrer qu'il est possible d'écrire un script (tout petit le script un peu plus de 1000lignes 🤪) et en l'exéxutant, accéder à une grnade partie des fonctionnalités d'une machine à distance. Que ce soit à propos de la machine en elle-même ou de l'utilisateur.
+Ici, nous allons vous montrer qu'il est possible d'écrire un script (tout petit le script un peu plus de 1000lignes 🤪) et en l'exéxutant, accéder à une grande partie des fonctionnalités d'une machine à distance. Que ce soit à propos de la machine en elle-même ou de l'utilisateur.
 
 ## 👥 Membres du groupe par sprint
 <span id="membres-du-groupe-par-sprint"></span>
