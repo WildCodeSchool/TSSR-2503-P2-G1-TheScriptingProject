@@ -74,11 +74,19 @@
 
 ##### Etape 2:  
 -------------------  
-- En choisissant **une action**, vous avez plusieurs choix possibles   
+- En choisissant **une action**, vous avez plusieurs choix possibles  
+  Vous pouvez :  
+  - Créer un nouveau compte utilisateur local  
+  - Changer le mot de passe d'un utilisateur  
+  - Supprimer un compte utilisateur  
+  - Désactiver un compte utilisateur  
+  - Ajouter un utilisateur à un groupe administrateur  
+  - Ajouter un utilisateur à un groupe local  
+  - Retirer un utilisateur à un groupe local  
+  - Revenir au menu précédent  
+![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)  
 
-![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)
 
-   
 
 
 
