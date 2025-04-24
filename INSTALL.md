@@ -43,5 +43,5 @@
 
 ----
 
-- **Q** : Pourquoi il y a un dossier "Log" qui ce créé dans le même répertoire où ce trouve le script en Shell Bash ?
+- **Q** : Pourquoi il y a un dossier "Log" qui ce créé dans le même répertoire où ce trouve le script ?
 - **R** : Pour chaque commande du script qui renvoie une information sur un utilisateur ou un ordinateur, un fichier est créé avec comme format de nom : "info_Cible_Date.txt". Ces fichiers sont stocker dans le dossier "Log".
