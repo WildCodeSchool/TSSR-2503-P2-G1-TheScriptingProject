@@ -89,12 +89,15 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
 | --------------------------------------- | --------------------------------------- |
+| Se projeter dans le projet et l'imaginer| Entraide principalement, réflexion      |
 | Ecriture des scripts bash et powershell | Documentation, cours                    |
 | Mise en place de la clef SSH            | Documentation, entraide et recherche    |
-|                                         |                                         |
-|                                         |                                         |
-|                                         |                                         |
+| Mise en place de WinRM                  |  Beaucoup de recherche et patience !    |
+| Organisation du script, agencement, structure | Réflexion et entraîde du groupe |
+| Adaptation à proxmox et création des machines | Temps de la prise en main et un super formateur!😁 |
 
 ## 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
 
+- Finir le script powershell
+- Réaliser l'objectif secondaire avec un peu plus de temps
