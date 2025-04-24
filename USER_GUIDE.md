@@ -1,11 +1,11 @@
 ### Sommaire
 
-1. [Serveur_Ubuntu](#ubuntu-serveur)  
+1. [Serveur Ubuntu](#ubuntu-serveur)  
     A. [Connexion au compte](#connexion-compte-ubu)  
     B. [Menu Utilisateur](#menu-utilisateur-ubu)  
     C. [Menu Ordinateur](#menu-ordinateur-ubu)  
     D. [Menu Script](#menu-script-ubu)  
-2. [Serveur_Windows](#windows-serveur)  
+2. [Serveur Windows](#windows-serveur)  
     A. [Connexion au compte](#connexion-compte-win)  
     B. [Menu Utilisateur](#menu-utilisateur-win)  
     C. [Menu Ordinateur](#menu-ordinateur-win)  
