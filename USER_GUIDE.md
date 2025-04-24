@@ -49,8 +49,9 @@
 -------------------  
 - Vous arrivez sur le Menu Principal:  
   > Ici vous pouvez choisir entre 3 grands menus que nous allons détailler par la suite :  
-    Le **Menu Utilisateur** (pour avoir des informations ou effectuer des actions sur un utilisateur)  
-    Le **Menu Ordinateur** (pour avoir des informations ou effectuer des actions sur un ordinateur)  
+    Le **Menu Utilisateur** (pour avoir des **informations** ou effectuer des **actions** sur un _**utilisateur**_)  
+    Le **Menu Ordinateur** (pour avoir des **informations** ou effectuer des **actions** sur un _**ordinateur**_)  
+    Le **Menu Script** (pour **rechercher des évènements** sur un _**utilisateur**_ ou un _**ordinateur**_)  
 
 ![menu_principal](https://github.com/user-attachments/assets/0bd84707-3fc9-49d2-b4e1-610863a38283)  
 
