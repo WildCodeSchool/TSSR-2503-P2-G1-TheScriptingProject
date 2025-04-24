@@ -68,7 +68,7 @@
 
 ##### Etape 1:  
 -------------------  
-- Vous pouvez choisir une **une action** ou **une information** ou **revenir au menu précédent**    
+- Vous pouvez choisir **une action** ou **une information** ou **revenir au menu précédent**    
 
 ![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1)  
 
@@ -84,7 +84,17 @@
   - Ajouter un utilisateur à un groupe local  
   - Retirer un utilisateur à un groupe local  
   - Revenir au menu précédent  
-![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)  
+![menu_des_action_utilisateur](https://github.com/user-attachments/assets/de278dcc-0fe8-42fb-847a-1041e214312f)
+
+
+### C.Menu Ordinateur  
+<span id="menu_ordinateur"></span>  
+
+##### Etape 1:  
+-------------------  
+- Vous pouvez choisir **une action** ou **une information** ou **revenir au menu précédent**    
+
+![menu_utilisateur](https://github.com/user-attachments/assets/839f85dc-60e6-4bd9-b10e-72ecfbc835d1)  
 
 
 
