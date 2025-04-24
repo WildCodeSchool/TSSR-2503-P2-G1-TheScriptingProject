@@ -47,12 +47,13 @@ function initialisation2
     Write-Host ""
     Write-Host "Merci d'Indiquer les information de connexion de l'utilisateur cible : "
     $Cred=$(Get-Credential)
+    Read-Host - -Prompt "Merci d'indiquer le chemin complet ou ce trouve le dossier 'Script' :" -OutVariable ScriptPath
     Clear-Host
     Write-Host "Initialisation des Credential..."
     Start-Sleep -Seconds 1
-    Write-Host "Initialistion des logs ..."
+    Write-Host "Initialistion des logs [WIP] ..."
     Start-Sleep -Seconds 1
-    Write-Host "Vérification ..."
+    Write-Host "Initialisation du dossier Script ..."
     Start-Sleep -Seconds 1
     Write-Host "Done"
     Start-Sleep -Seconds 1
@@ -705,9 +706,9 @@ function action_user_menu_choice
     $choice = Read-Host "Que voulez-vous faire ?"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {creating_a_local_user_account} }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\creating_a_local_user_account.ps1 }
         2 { change_password }
-        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {deleting_a_local_user_account} }
+        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\deleting_a_local_user_account.ps1 }
         4 { local_user_account_deactivation }
         5 { adding_to_an_administration_group }
         6 { adding_to_a_local_group }
@@ -829,15 +830,15 @@ function info_computer_menu_choice
     $choice = Read-Host "Que voulez-vous faire ?"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {os_version} }
-        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {disk_number} }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\os_version.ps1 }
+        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disk_number.ps1 }
         3 { partition_info }
         4 { free_space }
         5 { info_folder }
-        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {mounted_drive_list} }
+        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\mounted_drive_list.ps1 }
         7 { pack_app_installed }
-        8 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {serv_progress} }
-        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -ScriptBlock {local_users_list} }
+        8 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\serv_progress.ps1 }
+        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\local_users_list.ps1 }
         10 { total_ram }
         11 { ram_used }
         12 { computer_Menu }
