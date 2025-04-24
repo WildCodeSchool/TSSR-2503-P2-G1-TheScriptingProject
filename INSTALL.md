@@ -8,7 +8,7 @@
 <span id="prerequis-techniques"></span>
 
 ## 1.A Pour Debian
-- Un serveur Debian connecter sur le même réseau que les machines client
+- Un serveur Debian connecté sur le même réseau que les machines client
 - Le service SSH installer et actif sur toutes les machines client
 - Clé d'acces SSH paramétrer entre le Serveur et les machines client
 ## 1.B Pour Windows Serveur
