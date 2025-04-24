@@ -138,7 +138,7 @@
 
 
 ### D.Menu Script  
-<span id="menu_script"></span>  
+<span id="menu-script-ubu"></span>  
 
 ##### Etape 1:  
 -------------------  
@@ -147,11 +147,6 @@
 ![menu_script](https://github.com/user-attachments/assets/302605b6-add8-4577-9637-310d4453a875)  
   
   
-
-
-
-
-
 # 2. Serveur Windows  
 <span id="windows-serveur"></span>  
 
