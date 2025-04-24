@@ -3,15 +3,15 @@
 1. [Guide utilisateur](#utilisation-client)  
     A. [Connexion au compte](#connexion_compte)  
     B. [Menu Utilisateur](#menu_utilisateur)  
-    C. [Menu Ordinateur](#menu_ordinateur)
-    D. [Menu Script](#menu_script)
+    C. [Menu Ordinateur](#menu_ordinateur)  
+    D. [Menu Script](#menu_script)  
 2. [Guide administrateur](#utilisation-admin)  
 3. [FAQ](#faq)  
 
 # 1. Guide utilisateur  
 <span id="utilisation-client"></span>  
 
-****A.Connexion au compte***  
+**A.Connexion au compte**  
 <span id="connexion_compte"></span>  
 
 ### **Etape 1**:  
@@ -63,7 +63,7 @@
 ![menu_principal](https://github.com/user-attachments/assets/0bd84707-3fc9-49d2-b4e1-610863a38283)  
 
 
-****B.Menu Utilisateur***  
+**B.Menu Utilisateur**  
 <span id="menu_utilisateur"></span>  
 
 ### **Etape 1**:  
