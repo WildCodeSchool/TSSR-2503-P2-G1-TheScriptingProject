@@ -63,14 +63,14 @@
 ![menu_principal](https://github.com/user-attachments/assets/0bd84707-3fc9-49d2-b4e1-610863a38283)  
 
 
-**B.Menu Utilisateur**  
+### B.Menu Utilisateur  
 <span id="menu_utilisateur"></span>  
 
-### **Etape 1**:  
+##### Etape 1:  
 -------------------  
-- Se connecter avec le compte utilisateur **wilder** et entrer le mot de passe _Azerty1*_  
+- Vous pouvez choisir une **une action** ou **une information** ou **-revenir au menu précédent**    
 
-![connexion](https://github.com/user-attachments/assets/844385e6-d8bf-4d49-886d-404fe56e506d)  
+![connexion](https://github.com/user-attachments/assets/844385e6-d8bf-4d49-886d-404fe56e506d)    
 
 
 
