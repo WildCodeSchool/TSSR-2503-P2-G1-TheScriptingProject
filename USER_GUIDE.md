@@ -250,7 +250,7 @@
   
   
 ### C.Menu Ordinateur  
-<span id="menu_ordinateur-win"></span>  
+<span id="menu-ordinateur-win"></span>  
 
 ##### Etape 1:  
 -------------------  
@@ -304,11 +304,11 @@
 
 
 ### D.Menu Script  
-<span id="menu_script-win"></span>  
+<span id="menu-script-win"></span>  
 
 ##### Etape 1:  
 -------------------  
-- Vous pouvez choisir de **rechercher un évènement** dans le fichier _log_ pour un **utilisateur** ou un **ordinateur** ou **revenir au menu précédent**    
+- Vous pouvez choisir de **rechercher un évènement** dans le fichier _log_ pour un **utilisateur** ou un **ordinateur** ou **revenir au menu précédent** [WIP]    
   
 ![menu_script](https://github.com/user-attachments/assets/7bcd3768-5516-469b-a1d5-76d62d9539df)
   
