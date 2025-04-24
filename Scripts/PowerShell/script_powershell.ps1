@@ -744,11 +744,14 @@ function info_user_menu_choice
     $choice = Read-Host "Choisissez une information"
 
     switch ($choice) {
-        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_connexion.ps1 }
-        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_password.ps1 }
+        1 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_connexion.ps1
+            boucle }
+        2 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\last_date_password.ps1
+            boucle }
         3 { open_user_session }
         4 { user_groups }
-        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\all_command_user.ps1 }
+        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\all_command_user.ps1
+            boucle }
         6 { access_folder }
         7 { access_file }
         8 { user_menu }
@@ -788,14 +791,21 @@ function action_computer_menu_choice
     switch ($choice) {
         1 { computer_shutdown }
         2 { restart_computer }
-        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\computer_lock.ps1 }
-        4 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\system_update.ps1 }
-        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_creation.ps1 }
-        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_modification.ps1 }
-        7 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_deletion.ps1 }
+        3 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\computer_lock.ps1
+            boucle }
+        4 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\system_update.ps1
+            boucle }
+        5 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_creation.ps1
+            boucle }
+        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_modification.ps1
+            boucle }
+        7 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\directory_deletion.ps1
+            boucle }
         8 { remote_control }
-        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\enable_firewall.ps1 }
-        10 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disable_firewall.ps1 }
+        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\enable_firewall.ps1
+            boucle }
+        10 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\disable_firewall.ps1
+            boucle }
         11 { software_installation }
         12 { software_uninstallation }
         13 { script_execution_on_remote_machine }
@@ -839,10 +849,13 @@ function info_computer_menu_choice
         3 { partition_info }
         4 { free_space }
         5 { info_folder }
-        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\mounted_drive_list.ps1 }
+        6 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\mounted_drive_list.ps1
+            boucle }
         7 { pack_app_installed }
-        8 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\serv_progress.ps1 }
-        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\local_users_list.ps1 }
+        8 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\serv_progress.ps1
+            boucle }
+        9 {Invoke-Command -ComputerName $TargetComputeur -Credential $Cred -FilePath $ScriptPath\local_users_list.ps1
+            boucle }
         10 { total_ram }
         11 { ram_used }
         12 { computer_Menu }
