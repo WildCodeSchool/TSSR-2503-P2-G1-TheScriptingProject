@@ -5,8 +5,8 @@ Date=$(date +[%Y%m%d]-[%H%M%S])
 DateSingle=$(date +"[%Y%m%d]")
 LogFile=/var/log/log_evt.log
 LogFolder=./log/
-LogPc="[$TargetComputeur]-GEN$DateSingle".txt
-LogUser="[$TargetComputeur]_[$TargetUser]$DateSingle".txt 
+LogPc="info_[$TargetComputeur]-GEN_[$DateSingle]".txt
+LogUser="info_[$TargetComputeur]_[$TargetUser]_[$DateSingle]".txt 
 
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -28,6 +28,7 @@ function Initialisation1 ()
     if [ ! -e $LogFile ]
     then
         touch $LogFile
+        sudo chmod u+rwx $LogFile
     fi
     sleep 1
     echo "Vérification ..."
