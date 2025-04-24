@@ -87,15 +87,13 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 ### Logiciel
 
 
-##  🧗 Difficultés rencontrées
-<span id="difficultes-rencontrees"></span>
-
-- Réalisation des scripts Bash et Powershell
-
-## 💡 Solutions trouvées
-<span id="solutions-trouvees"></span>
-
-Pour la réalisation des scripts, la documentation et les cours nous ont permis de recueillir les informations nécessaire pour leur réalisation
+|  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
+| --------------------------------------- | --------------------------------------- |
+| Ecriture des scripts bash et powershell|| Documentation, cours                    |
+| Mise en place de la clef SSH            | Documentation, entraide et recherche    |
+|                                         | |
+|                                         | |
+|                                         | |
 
 ## 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
