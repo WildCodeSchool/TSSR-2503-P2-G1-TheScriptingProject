@@ -8,9 +8,8 @@
 - [🎯 Présentation générale du projet](#presentation-du-projet)
 - [📜 Introduction](#introduction)
 - [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
-- [⚙️ Choix Techniques](#choix-techniques)
-- [🧗Difficultés rencontrées](#difficultes-rencontrees)
-- [💡 Solutions trouvées](#solutions-trouvees)
+- [⚙️ Prérequis](#Prérequis)
+- [🧗Difficultés rencontrées💡Solutions trouvées](#Difficultés-rencontrées-et-solutions-trouvées)
 - [🚀 Améliorations possibles](#ameliorations-possibles)
 
 ---
@@ -34,7 +33,8 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 ## 📜 Introduction
 <span id="introduction"></span>
 
-
+Vous souhaitez avoir accès à une grande partie d'un ordinateur à distance sans avoir à parcourir l'intégralité de celui-ci alors vous êtes au bon endroit !
+Ici, nous allons vous montrer qu'il est possible d'écrire un script (il y a ddeux scripts bash et powershell mais tous petits les scripts un peu plus de 1000lignes chacun 🤪) et en l'exécutant, accéder à une grande partie des fonctionnalités d'une machine à distance. Que ce soit à propos de la machine en elle-même ou de l'utilisateur.
 
 ## 👥 Membres du groupe par sprint
 <span id="membres-du-groupe-par-sprint"></span>
@@ -73,28 +73,34 @@ Ces scripts doivent intérargir avec des machines distantes, que nous avons cré
 |   Tatiana      | Technicien    | Ecriture des scripts powershell et de la documentation |
 |   Lloyd        | Product Owner | Importation des scripts au squelette, modifications, test  |
 
-## ⚙️ Choix techniques
-<span id="choix-techniques"></span>
+## ⚙️ Prérequis
+<span id="Prérequis"></span>
 
+- Compte Promox
+- Machines Virtuelles (Nous avons mis en place 4machines virtuelles sur proxmox)
+  > Ubuntu (Client)
+  > Debian (Serveur)
+  > Windows (Client)
+  > Windows (Serveur)
 
+- Configuration des machines pour que celles-ci soient accessibles à distance
+- Connaissances en scripting bash et powershell
 
-### Machines
-
-#### Configuration de machine virtuelle serveur
-
-#### Configuration de machine virtuelle client 2
-
-### Logiciel
+## 🧗 Difficultés rencontrées et 💡 Solutions trouvées
+<span id="Difficultés-rencontrées-et-solutions-trouvées"></span>
 
 
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
 | --------------------------------------- | --------------------------------------- |
+| Se projeter dans le projet et l'imaginer| Entraide principalement, réflexion      |
 | Ecriture des scripts bash et powershell | Documentation, cours                    |
 | Mise en place de la clef SSH            | Documentation, entraide et recherche    |
-|                                         |                                         |
-|                                         |                                         |
-|                                         |                                         |
+| Mise en place de WinRM                  |  Beaucoup de recherche et patience !    |
+| Organisation du script, agencement, structure | Réflexion et entraîde du groupe |
+| Adaptation à proxmox et création des machines | Temps de la prise en main et un super formateur!😁 |
 
 ## 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
 
+- Finir le script powershell
+- Réaliser l'objectif secondaire avec un peu plus de temps
