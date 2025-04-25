@@ -1,5 +1,6 @@
 # The Scripting Project
-![logo]()
+![logo](https://github.com/user-attachments/assets/cfcae90c-67e7-4ff7-a2bd-ff665efd1d48)
+
 
 ---
 
