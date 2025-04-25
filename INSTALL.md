@@ -26,14 +26,14 @@
 - Donner les droits d'exécution sur le script avec la commande :
 > chmod u+x script_principal.sh
 - Lancer le script avec la commande :
-> ./script_principal.sh
+> ./script_bash_v1.0.sh
 
 ## 1.B Pour Windows Serveur
 - Télécharger le dépôt GitHub au format .zip à cette adresse :
 > https://github.com/WildCodeSchool/TSSR-2503-P2-G1-TheScriptingProject
 - Décompresser le fichier téléchargé où vous voulez sur votre machine
 - Ouvrer le dossier "PowerShell"
-- Lancer le fichier "script_powershell.ps1" avec PowerShell
+- Lancer le fichier "script_powershell_v0.4.ps1" avec PowerShell
 
 # 3. FAQ
 <span id="faq"></span>
