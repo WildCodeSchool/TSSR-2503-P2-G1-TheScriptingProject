@@ -78,14 +78,14 @@ Ici, nous allons vous montrer qu'il est possible d'écrire un script (il y a deu
 <span id="Prérequis"></span>
 
 - Compte Promox
-- Machines Virtuelles (Nous avons mis en place 4machines virtuelles sur proxmox)
+- Machines Virtuelles (Nous avons mis en place 4 machines virtuelles sur proxmox)
   > Ubuntu (Client)
   > Debian (Serveur)
   > Windows (Client)
   > Windows (Serveur)
 
 - Configuration des machines pour que celles-ci soient accessibles à distance
-- Connaissances en scripting bash et powershell
+- Connaissances en scripting Bash et PowerShell
 
 ## 🧗 Difficultés rencontrées et 💡 Solutions trouvées
 <span id="Difficultés-rencontrées-et-solutions-trouvées"></span>
@@ -94,7 +94,7 @@ Ici, nous allons vous montrer qu'il est possible d'écrire un script (il y a deu
 |  [🧗Difficultés rencontrées](#difficultes-rencontrees)|[💡Solutions trouvées](#solutions-trouvees)|  
 | --------------------------------------- | --------------------------------------- |
 | Se projeter dans le projet et l'imaginer| Entraide principalement, réflexion      |
-| Ecriture des scripts bash et powershell | Documentation, cours                    |
+| Ecriture des scripts Bash et PowerShell | Documentation, cours                    |
 | Mise en place de la clef SSH            | Documentation, entraide et recherche    |
 | Mise en place de WinRM                  |  Beaucoup de recherche et patience !    |
 | Organisation du script, agencement, structure | Réflexion et entraîde du groupe |
