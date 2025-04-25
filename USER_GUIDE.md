@@ -10,7 +10,7 @@
     B. [Menu Utilisateur](#menu-utilisateur-win)  
     C. [Menu Ordinateur](#menu-ordinateur-win)  
     D. [Menu Script](#menu-script-win)  
-3. [FAQ](#faq)  
+  
 
 # 1. Serveur Ubuntu  
 <span id="ubuntu-serveur"></span>  
@@ -316,6 +316,4 @@ Toute notre équipe s'excuse pour la gêne occasionnée.
 ![menu_script](https://github.com/user-attachments/assets/7bcd3768-5516-469b-a1d5-76d62d9539df)
   
   
-  
-# 3. FAQ
-<span id="faq"></span>
+
