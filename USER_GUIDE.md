@@ -198,6 +198,9 @@ Toute notre équipe s'excuse pour la gêne occasionnée.
   
 ![message_de_bienvenue](https://github.com/user-attachments/assets/82be50c2-b839-4977-8ead-f04257abb81a)  
 
+![message_bis_chemin](https://github.com/user-attachments/assets/1502cfad-f53d-4a8e-bbd5-1fd4668465e6)  
+
+
 Voici un exemple du chemin du dossier script avec le nom utilisateur Administrator :  
  
   
