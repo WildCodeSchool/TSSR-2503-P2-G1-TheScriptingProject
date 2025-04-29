@@ -35,7 +35,7 @@
 ##### Etape 3:  
 -------------------  
 - Lancer le script avec la commande:  
-  > **./script_principal.sh**  
+  > **sudo ./script_bash_v1.0.sh**  
 
 ![lancement_du_script](https://github.com/user-attachments/assets/7ccd38be-26f0-4474-89f3-4f36a6736ed0)  
 
