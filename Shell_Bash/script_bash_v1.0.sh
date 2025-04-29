@@ -84,7 +84,7 @@ function Initialisation2 ()
     case "$Ini2" in
         1)
             TargetUser=wilder
-            echo "********StartScript********" >> $LogFile
+            sudo echo "********StartScript********" >> $LogFile
             echo ""
             echo "Initialisation des variables ..."
             LogPc="[$TargetComputeur]-GEN$DateSingle".txt
@@ -96,7 +96,7 @@ function Initialisation2 ()
             ;;
         2)
             read -p "Merci de rentrer le nom de l'utilisateur cible : " TargetUser
-            echo "********StartScript********" >> $LogFile
+            sudo echo "********StartScript********" >> $LogFile
             echo ""
             echo "Initialisation des variables ..."
             LogPc="[$TargetComputeur]-GEN$DateSingle".txt
@@ -133,7 +133,7 @@ function boucle ()
         echo "Arret du script ..."
         sleep 1
         echo "Enregistrement des logs ..."
-        echo "*********EndScript*********" >> $LogFile
+        sudo echo "*********EndScript*********" >> $LogFile
         sleep 1
         echo "Vérification ..."
         sleep 1
