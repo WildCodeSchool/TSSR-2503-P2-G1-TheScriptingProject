@@ -194,7 +194,7 @@ Toute notre équipe s'excuse pour la gêne occasionnée.
 
 ##### Etape 3:  
 -------------------  
-- Un message de bienvenue s'affiche, indiquez le chemin complet jusqu'où se trouve le dossier "Script" ( C:\Users\(Votre nom)\Desktop\TSSR-2503-P2-G1-TheScriptingProject\Script ) puis appuyez sur la touche [Entrée] pour valider:  
+- Un message de bienvenue s'affiche, indiquez le chemin complet jusqu'où se trouve le dossier "Script" `C:\Users\(Votre nom)\Desktop\TSSR-2503-P2-G1-TheScriptingProject\Script` puis appuyez sur la touche [Entrée] pour valider:  
   
 ![message_de_bienvenue](https://github.com/user-attachments/assets/82be50c2-b839-4977-8ead-f04257abb81a)  
 
