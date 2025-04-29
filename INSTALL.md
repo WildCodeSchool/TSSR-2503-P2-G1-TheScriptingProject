@@ -19,7 +19,7 @@
 <span id="installation"></span>
 
 ## 1.A Pour Debian
-- Se connecter avec le compte utilisateur "wilder" et le mot de passe "azerty1*"
+- Se connecter avec le compte utilisateur "*wilder*" et le mot de passe "*azerty1**"
 - Cloner le dépôt GitHub avec la commande :
 > git clone https://github.com/WildCodeSchool/TSSR-2503-P2-G1-TheScriptingProject.git
 - Aller dans le dossier Shell_Bash avec la commande :
