@@ -8,6 +8,7 @@
 <span id="prerequis-techniques"></span>
 
 ## 1.A Pour Debian
+- La commande SUDO installer
 - Un serveur Debian connecté sur le même réseau que les machines client
 - Le service SSH installé et actif sur toutes les machines client
 - Clé d'accès SSH paramétrée entre le serveur et les machines client
