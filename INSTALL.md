@@ -28,7 +28,7 @@
 - Donner les droits d'exécution sur le script avec la commande :
 > chmod u+x script_bash_v1.0.sh
 - Lancer le script avec la commande :
-> ./script_bash_v1.0.sh
+> sudo ./script_bash_v1.0.sh
 
 ## 1.B Pour Windows Serveur
 - Télécharger le dépôt GitHub au format .zip à cette adresse :
