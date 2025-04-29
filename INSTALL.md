@@ -15,6 +15,7 @@
 ## 1.B Pour Windows Serveur
 - Un serveur Windows Serveur connecté sur le même réseau que les machines client
 - Le service WinRM installé et actif sur toutes les machines client
+- l'option Beta "Utiliser Unicode UTF-8" activer dans les paramètres de langue du système
 
 # 2. Installation
 <span id="installation"></span>
