@@ -1426,7 +1426,7 @@ function main_menu ()
         echo "Arret du script ..."
         sleep 1
         echo "Enregistrement des logs ..."
-        sudo echo "*********EndScript*********" >> $LogFile
+        echo "*********EndScript*********" >> $LogFile
         sleep 1
         echo "Vérification ..."
         sleep 1
