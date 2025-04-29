@@ -24,7 +24,7 @@
 - Aller dans le dossier Shell_Bash avec la commande :
 > cd TSSR-2503-P2-G1-TheScriptingProject/Shell_Bach
 - Donner les droits d'exécution sur le script avec la commande :
-> chmod u+x script_principal.sh
+> chmod u+x script_bash_v1.0.sh
 - Lancer le script avec la commande :
 > ./script_bash_v1.0.sh
 
