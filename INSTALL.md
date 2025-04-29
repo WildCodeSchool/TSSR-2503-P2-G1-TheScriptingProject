@@ -33,7 +33,7 @@
 ## 1.B Pour Windows Serveur
 - Télécharger le dépôt GitHub au format .zip à cette adresse :
 > https://github.com/WildCodeSchool/TSSR-2503-P2-G1-TheScriptingProject
-- Décompresser le fichier téléchargé zip sur le bureau de votre machine
+- Décompresser le fichier téléchargé sur le bureau de votre machine
 - Ouvrir le dossier "TSSR-2503-P2-G1-TheScriptingProject-main
 - Ensuite ouvrir le fichier "PowerShell"
 - Lancer le fichier "script_powershell_v0.4.ps1" avec PowerShell
