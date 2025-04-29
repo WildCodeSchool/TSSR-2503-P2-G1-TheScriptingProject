@@ -616,7 +616,7 @@ function pack_app_installed
 }
 
 
-#Fonction liste des services en cours d'exécution
+#Fonction liste des services en cours d'exécutions
 function serv_progress 
 {
     Clear-Host
