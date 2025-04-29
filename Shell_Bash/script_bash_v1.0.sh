@@ -27,8 +27,8 @@ function Initialisation1 ()
     echo "Initialisation du fichiers log_evt.log ..."
     if [ ! -e $LogFile ]
     then
-        sudo touch $LogFile
-        sudo chmod u+rwx $LogFile
+        touch $LogFile
+        chmod u+rwx $LogFile
     fi
     sleep 1
     echo "Vérification ..."
