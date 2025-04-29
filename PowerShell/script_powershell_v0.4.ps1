@@ -1,5 +1,5 @@
 #----------------------------------------------------------------------------------------------------------------------
-#				Declaration de variable
+#				Déclaration de variable
 #----------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,7 +28,7 @@ function initialisation1
             initialisation2}
         2 {Read-Host "Choix invalide, appuyez sur [Entrée] pour continuer"
         initialisation1}
-        3 {Read-Host -Prompt "Merci de rentrer l'adresse IP de la machine cible " -OutVariable TargetComputeur
+        3 {Read-Host -Prompt "Merci d'entrer l'adresse IP de la machine cible " -OutVariable TargetComputeur
             initialisation2}
         4 {exit}
         default {
@@ -45,9 +45,9 @@ function initialisation2
     Clear-Host
     Write-Host "===== Bienvenue ====="  
     Write-Host ""
-    Write-Host "Merci d'Indiquer les information de connexion de l'utilisateur cible : "
+    Write-Host "Merci d'indiquer les informations de connexion de l'utilisateur cible : "
     $Cred=$(Get-Credential)
-    Read-Host -Prompt "Merci d'indiquer le chemin complet ou ce trouve le dossier 'Script' " -OutVariable ScriptPath
+    Read-Host -Prompt "Merci d'indiquer le chemin complet où se trouve le dossier 'Script' " -OutVariable ScriptPath
     Clear-Host
     Write-Host "Initialisation des Credential..."
     Start-Sleep -Seconds 1
@@ -69,7 +69,7 @@ function boucle {
     Clear-Host
     Write-Host "===== Tâche terminée ====="
     Write-Host ""
-    $choix = Read-Host "Vous voulez continuer ? [Oui/Non]"
+    $choix = Read-Host "Voulez-vous continuer ? [Oui/Non]"
     Switch ($choix) {
         Oui {main_menu}
         Non {Clear-Host
@@ -156,7 +156,7 @@ function deleting_a_local_user_account
 }
 
 
-#Fonction de la désactivation de compte utilisateur local
+#Fonction de désactivation de compte utilisateur local
 function local_user_account_deactivation 
 {
     Clear-Host
@@ -230,7 +230,7 @@ function last_date_password
 }
 
 
-#Fonction de la liste des session ouvertes par un utilisateur
+#Fonction de la liste des sessions ouvertes par un utilisateur
 function open_user_session 
 {
     Clear-Host
@@ -294,9 +294,9 @@ function access_file
 function computer_shutdown 
 {
     Clear-Host
-    Write-Host "Arret de $TargetComputeur en cours ..."
+    Write-Host "Arrêt de $TargetComputeur en cours ..."
     Stop-Computer -ComputerName $TargetComputeur -Credential $Cred -Force
-    Write-Host "Arret effectuer"
+    Write-Host "Arrêt effectué"
     Read-Host "Appuyez sur [Entrée] pour continuer"
     boucle
 }
@@ -308,7 +308,7 @@ function restart_computer
     Clear-Host
     Write-Host "Redémarrage de $TargetComputeur en cours ..."
     Restart-Computer -ComputerName $TargetComputeur -Credential $Cred -Force
-    Write-Host "Redémarrage effectuer"
+    Write-Host "Redémarrage effectué"
     Read-Host "Appuyez sur [Entrée] pour continuer"
     boucle
 }
@@ -321,40 +321,40 @@ function computer_lock
     Write-Host "Verrouillage de $TargetComputeur en cours ..."
     #Option Lock dans le fichier user32.dll avec la commande rundll32.exe
     rundll32.exe user32.dll,LockWorkStation
-    Write-Host "Verrouillage effectuer"
+    Write-Host "Verrouillage effectué"
     Read-Host "Appuyez sur [Entrée] pour continuer"
     boucle
 }
 
 
-#Fonction de mise-à-jour du système
+#Fonction de mise à jour du système
 function system_update 
 {
     Clear-Host
     #On enregistre la "Politique d'execution du PC" dans la variable ExePolicie 
     $ExePolicie=Get-ExecutionPolicy
-    #On verifie ExePolicie : si elle est pas "Bypass" ont la modifie sinon on continue
+    #On verifie ExePolicie : si elle n'est pas "Bypass" on la modifie sinon on continue
     if ($ExePolicie -ne "Bypass") 
     {
         Set-ExecutionPolicy Bypass -Force
     }
-    #Import et install le module PSWindowsUpdate
+    #Importer et installer le module PSWindowsUpdate
     Install-Module PSWindowsUpdate
-    #On recupere le nombre de MaJ dispo
+    #On recupère le nombre de MaJ dispo
     $UpDate=Get-WindowsUpdate
-    #Si il n'y pas de MaJ dispo ont arrete le script
+    #S'il n'y pas de MaJ dispo on arrête le script
     if ($UpDate.Count -eq 0)
     {
-        Write-Host "Pas de Mise à Jour disponible"
-        Read-Host "Appuiez sur ENTER pour quitter ..."
+        Write-Host "Pas de Mise à jour disponible"
+        Read-Host "Appuyez sur ENTER pour quitter ..."
         Exit 1
     }
-    Write-Host "$($UpDate.Count) Mise à Jour trouvée. Installation des Mise à Jour ..."
+    Write-Host "$($UpDate.Count) Mises à jour trouvées. Installation des mises à jour ..."
     Install-WindowsUpdate -AcceptAll
-    Write-Host "Mise à jour : Terminer."
-    #On remet la "Politique d'execution" comme on la trouver au debut
+    Write-Host "Mises à jour : Terminées."
+    #On remet la "Politique d'exécution" comme on l'a trouvé au début
     Set-ExecutionPolicy $ExePolicie -Force
-    Read-Host "Appuiez sur ENTER pour continuer ..."
+    Read-Host "Appuyez sur ENTER pour continuer ..."
     boucle
 }
 
@@ -402,7 +402,7 @@ function directory_deletion
     $nomDossier = Read-Host "Entrez le nom du dossier"
     $chemin = Read-Host "Entrez le chemin complet"
     Remove-Item $nomDossier
-    Write-Host "`nLe dossier et son contenu ont été supprimer" -ForegroundColor Green
+    Write-Host "`nLe dossier et son contenu ont été supprimés" -ForegroundColor Green
     Read-Host "Appuyez sur [Entrée] pour continuer"
     boucle
 }
@@ -430,7 +430,7 @@ function enable_firewall
     {
         #Demande d'activation
         Write-Host "Le pare-feu est désactivé, voulez-vous l'activer?(oui/non)"
-        $choix = Read-Host "reponse"
+        $choix = Read-Host "réponse"
         #Lecture du choix
         switch ($choix) {
             oui { 
@@ -471,7 +471,7 @@ function disable_firewall
     if ($firewall_status -eq $False) {
     #Demande de désactivation
     Write-Host "Le pare-feu est activé, voulez-vous le désactiver?(oui/non)"
-    $choix = Read-Host "reponse"
+    $choix = Read-Host "réponse"
 
         #Lecture du choix
         switch ($choix) 
@@ -606,7 +606,7 @@ function mounted_drive_list
 }
 
 
-#Fonction liste des applications/paquets installées
+#Fonction liste des applications/paquets installés
 function pack_app_installed 
 {
     Clear-Host
@@ -620,8 +620,8 @@ function pack_app_installed
 function serv_progress 
 {
     Clear-Host
-    #Liste des services en cours d'execution
-    Write-Host "Voici la liste des services en cours d'execution"`n 
+    #Liste des services en cours d'exécutions
+    Write-Host "Voici la liste des services en cours d'executions"`n 
     #Affichage de la liste
     Get-Service | Where-Object {$_.status -eq "Running"}
     Read-Host "Appuyez sur [Entrée] pour continuer"
@@ -633,7 +633,7 @@ function local_users_list
 {
     Clear-Host
     #Liste des utilisateurs locaux
-    Write-Host "Voici la liste utilisateurs"
+    Write-Host "Voici la liste des utilisateurs"
     Get-LocalUser
     Read-Host "Appuyez sur [Entrée] pour continuer"
     boucle
@@ -686,7 +686,7 @@ function computer_event
 #                                                 Fonctions sous sous-menu
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
-#Fonction du sous Menu des actions utilisateur
+#Fonction du sous menu des actions utilisateur
 
 function action_user_menu_choice 
 {
@@ -724,7 +724,7 @@ function action_user_menu_choice
 }
 
 
-#Fonction du sous Menu des informations utilisateur
+#Fonction du sous menu des informations utilisateur
 
 function info_user_menu_choice 
 {
@@ -818,7 +818,7 @@ function action_computer_menu_choice
 }
 
 
-#Fonction du sous Menu des informations Ordinateur
+#Fonction du sous menu des informations Ordinateur
 
 function info_computer_menu_choice 
 {
@@ -868,7 +868,7 @@ function info_computer_menu_choice
 
 
 #-------------------------------------------------------------------------------------------------------------------------------
-#                                                     Fonction des sous menu
+#                                                     Fonction des sous menus
 #-------------------------------------------------------------------------------------------------------------------------------
 
 #Fonction du Menu Utilisateur
